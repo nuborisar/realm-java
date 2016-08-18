@@ -19,7 +19,7 @@
 #include <realm/commit_log.hpp>
 #include "util.hpp"
 #include "io_realmox_internal_TableQuery.h"
-
+#include <realm/data_type.hpp>
 using namespace realmox;
 
 #if 1
