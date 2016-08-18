@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.realmox.transformer
+package io.realm.transformer
 
 import com.android.SdkConstants
 import com.android.build.api.transform.*
