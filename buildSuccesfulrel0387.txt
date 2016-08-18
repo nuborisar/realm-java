@@ -1,0 +1,978 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/2.10/userguide/gradle_daemon.html.
+:installAnnotations
+[buildinfo] Not using buildInfo properties file for this build.
+:realm-annotations:compileJava UP-TO-DATE
+:realm-annotations:processResources UP-TO-DATE
+:realm-annotations:classes UP-TO-DATE
+:realm-annotations:jar UP-TO-DATE
+:realm-annotations:install
+:installTransformer
+[buildinfo] Not using buildInfo properties file for this build.
+:realm-transformer:compileKotlin UP-TO-DATE
+:realm-transformer:generateVersionClass
+:realm-transformer:compileJava UP-TO-DATE
+:realm-transformer:compileGroovy UP-TO-DATE
+:realm-transformer:processResources UP-TO-DATE
+:realm-transformer:classes UP-TO-DATE
+:realm-transformer:jar UP-TO-DATE
+:realm-transformer:install
+:installRealm
+Incremental java compilation is an incubating feature.
+[buildinfo] Not using buildInfo properties file for this build.
+:realm:realm-annotations-processor:generateVersionClass
+:realm:realm-annotations-processor:compileJava UP-TO-DATE
+:realm:realm-annotations-processor:processResources UP-TO-DATE
+:realm:realm-annotations-processor:classes UP-TO-DATE
+:realm:realm-annotations-processor:jar UP-TO-DATE
+:realm:realm-annotations-processor:install
+:realm:realm-jni:downloadCore
+:realm:realm-jni:deployCore UP-TO-DATE
+:realm:realm-jni:generateNdkToolchainArm UP-TO-DATE
+:realm:realm-jni:buildAndroidJniArm
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-arm.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniArm
+:realm:realm-jni:buildAndroidJniArm-v7a
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-arm-v7a.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniArm-v7a
+:realm:realm-jni:generateNdkToolchainArm64 UP-TO-DATE
+:realm:realm-jni:buildAndroidJniArm64
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-arm64.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniArm64
+:realm:realm-jni:generateNdkToolchainMips UP-TO-DATE
+:realm:realm-jni:buildAndroidJniMips
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-mips.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniMips
+:realm:realm-jni:generateNdkToolchainX86 UP-TO-DATE
+:realm:realm-jni:buildAndroidJniX86
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-x86.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniX86
+:realm:realm-jni:generateNdkToolchainX86_64 UP-TO-DATE
+:realm:realm-jni:buildAndroidJniX86_64
+make: Entering directory '/realm-java/realm/realm-jni/src'
+make: 'librealm-jni-x86_64.so' is up to date.
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm:realm-jni:copyAndroidJniX86_64
+:realm:realm-jni:buildAndroidJni
+:realm:realm-library:preBuild
+:realm:realm-library:preReleaseBuild
+:realm:realm-library:compileReleaseNdk UP-TO-DATE
+:realm:realm-library:compileLint
+:realm:realm-library:copyReleaseLint UP-TO-DATE
+:realm:realm-library:mergeReleaseProguardFiles UP-TO-DATE
+:realm:realm-library:packageReleaseRenderscript UP-TO-DATE
+:realm:realm-library:checkReleaseManifest
+:realm:realm-library:preDebugAndroidTestBuild
+:realm:realm-library:preDebugBuild
+:realm:realm-library:preDebugUnitTestBuild
+:realm:realm-library:preReleaseUnitTestBuild
+:realm:realm-library:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm:realm-library:prepareReleaseDependencies
+:realm:realm-library:compileReleaseRenderscript UP-TO-DATE
+:realm:realm-library:generateReleaseResValues UP-TO-DATE
+:realm:realm-library:generateReleaseResources UP-TO-DATE
+:realm:realm-library:packageReleaseResources UP-TO-DATE
+:realm:realm-library:compileReleaseAidl UP-TO-DATE
+:realm:realm-library:generateReleaseBuildConfig UP-TO-DATE
+:realm:realm-library:mergeReleaseShaders UP-TO-DATE
+:realm:realm-library:compileReleaseShaders UP-TO-DATE
+:realm:realm-library:generateReleaseAssets UP-TO-DATE
+:realm:realm-library:mergeReleaseAssets UP-TO-DATE
+:realm:realm-library:mergeReleaseResources UP-TO-DATE
+:realm:realm-library:processReleaseManifest UP-TO-DATE
+:realm:realm-library:processReleaseResources UP-TO-DATE
+:realm:realm-library:generateReleaseSources UP-TO-DATE
+:realm:realm-library:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm:realm-library:compileReleaseJavaWithJavac UP-TO-DATE
+:realm:realm-library:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm:realm-library:processReleaseJavaRes UP-TO-DATE
+:realm:realm-library:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm:realm-library:transformClassesAndResourcesWithSyncLibJarsForRelease UP-TO-DATE
+:realm:realm-library:mergeReleaseJniLibFolders UP-TO-DATE
+:realm:realm-library:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm:realm-library:transformNative_libsWithSyncJniLibsForRelease UP-TO-DATE
+:realm:realm-library:bundleRelease UP-TO-DATE
+:realm:realm-library:javadoc UP-TO-DATE
+:realm:realm-library:javadocJar UP-TO-DATE
+:realm:realm-library:sourcesJar UP-TO-DATE
+:realm:realm-library:install
+:installGradlePlugin
+:realm-gradle-plugin:generateVersionClass
+:realm-gradle-plugin:compileJava UP-TO-DATE
+:realm-gradle-plugin:compileGroovy UP-TO-DATE
+:realm-gradle-plugin:processResources UP-TO-DATE
+:realm-gradle-plugin:classes UP-TO-DATE
+:realm-gradle-plugin:jar UP-TO-DATE
+:realm-gradle-plugin:install
+:assembleExamples
+:realm-examples:encryptionExample:preBuild UP-TO-DATE
+:realm-examples:encryptionExample:preDebugBuild UP-TO-DATE
+:realm-examples:encryptionExample:checkDebugManifest
+:realm-examples:encryptionExample:preReleaseBuild UP-TO-DATE
+:realm-examples:encryptionExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:encryptionExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:encryptionExample:prepareDebugDependencies
+:realm-examples:encryptionExample:compileDebugAidl UP-TO-DATE
+:realm-examples:encryptionExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:encryptionExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:encryptionExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:encryptionExample:compileDebugShaders UP-TO-DATE
+:realm-examples:encryptionExample:generateDebugAssets UP-TO-DATE
+:realm-examples:encryptionExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:encryptionExample:generateDebugResValues UP-TO-DATE
+:realm-examples:encryptionExample:generateDebugResources UP-TO-DATE
+:realm-examples:encryptionExample:mergeDebugResources UP-TO-DATE
+:realm-examples:encryptionExample:processDebugManifest UP-TO-DATE
+:realm-examples:encryptionExample:processDebugResources UP-TO-DATE
+:realm-examples:encryptionExample:generateDebugSources UP-TO-DATE
+:realm-examples:encryptionExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:encryptionExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:encryptionExample:compileDebugNdk UP-TO-DATE
+:realm-examples:encryptionExample:compileDebugSources UP-TO-DATE
+:realm-examples:encryptionExample:prePackageMarkerForDebug
+:realm-examples:encryptionExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:encryptionExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:encryptionExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:encryptionExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:encryptionExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:encryptionExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:encryptionExample:validateDebugSigning
+:realm-examples:encryptionExample:packageDebug UP-TO-DATE
+:realm-examples:encryptionExample:zipalignDebug UP-TO-DATE
+:realm-examples:encryptionExample:assembleDebug UP-TO-DATE
+:realm-examples:encryptionExample:checkReleaseManifest
+:realm-examples:encryptionExample:prepareReleaseDependencies
+:realm-examples:encryptionExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:encryptionExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:encryptionExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:encryptionExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:encryptionExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:encryptionExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:encryptionExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:encryptionExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:encryptionExample:generateReleaseResources UP-TO-DATE
+:realm-examples:encryptionExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:encryptionExample:processReleaseManifest UP-TO-DATE
+:realm-examples:encryptionExample:processReleaseResources UP-TO-DATE
+:realm-examples:encryptionExample:generateReleaseSources UP-TO-DATE
+:realm-examples:encryptionExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:encryptionExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:encryptionExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:encryptionExample:compileReleaseSources UP-TO-DATE
+:realm-examples:encryptionExample:lintVitalRelease
+:realm-examples:encryptionExample:prePackageMarkerForRelease
+:realm-examples:encryptionExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:encryptionExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:encryptionExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:encryptionExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:encryptionExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:encryptionExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:encryptionExample:packageRelease UP-TO-DATE
+:realm-examples:encryptionExample:assembleRelease
+:realm-examples:encryptionExample:assemble
+:realm-examples:gridViewExample:preBuild UP-TO-DATE
+:realm-examples:gridViewExample:preDebugBuild UP-TO-DATE
+:realm-examples:gridViewExample:checkDebugManifest
+:realm-examples:gridViewExample:preReleaseBuild UP-TO-DATE
+:realm-examples:gridViewExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:gridViewExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:gridViewExample:prepareDebugDependencies
+:realm-examples:gridViewExample:compileDebugAidl UP-TO-DATE
+:realm-examples:gridViewExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:gridViewExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:gridViewExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:gridViewExample:compileDebugShaders UP-TO-DATE
+:realm-examples:gridViewExample:generateDebugAssets UP-TO-DATE
+:realm-examples:gridViewExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:gridViewExample:generateDebugResValues UP-TO-DATE
+:realm-examples:gridViewExample:generateDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:mergeDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processArm64-v8aDebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArm64-v8aDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabi-v7aDebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabi-v7aDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabiDebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabiDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processMipsDebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processMipsDebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processX86DebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processX86DebugResources UP-TO-DATE
+:realm-examples:gridViewExample:processX86_64DebugManifest UP-TO-DATE
+:realm-examples:gridViewExample:processX86_64DebugResources UP-TO-DATE
+:realm-examples:gridViewExample:generateDebugSources UP-TO-DATE
+:realm-examples:gridViewExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:gridViewExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:gridViewExample:prePackageMarkerForDebug
+:realm-examples:gridViewExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:gridViewExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:gridViewExample:compileDebugNdk UP-TO-DATE
+:realm-examples:gridViewExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:gridViewExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:gridViewExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:gridViewExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:gridViewExample:validateDebugSigning
+:realm-examples:gridViewExample:packageArm64-v8aDebug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignArm64-v8aDebug UP-TO-DATE
+:realm-examples:gridViewExample:assembleArm64-v8aDebug UP-TO-DATE
+:realm-examples:gridViewExample:packageArmeabi-v7aDebug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignArmeabi-v7aDebug UP-TO-DATE
+:realm-examples:gridViewExample:assembleArmeabi-v7aDebug UP-TO-DATE
+:realm-examples:gridViewExample:packageArmeabiDebug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignArmeabiDebug UP-TO-DATE
+:realm-examples:gridViewExample:assembleArmeabiDebug UP-TO-DATE
+:realm-examples:gridViewExample:packageMipsDebug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignMipsDebug UP-TO-DATE
+:realm-examples:gridViewExample:assembleMipsDebug UP-TO-DATE
+:realm-examples:gridViewExample:packageX86Debug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignX86Debug UP-TO-DATE
+:realm-examples:gridViewExample:assembleX86Debug UP-TO-DATE
+:realm-examples:gridViewExample:packageX86_64Debug UP-TO-DATE
+:realm-examples:gridViewExample:zipalignX86_64Debug UP-TO-DATE
+:realm-examples:gridViewExample:assembleX86_64Debug UP-TO-DATE
+:realm-examples:gridViewExample:compileDebugSources UP-TO-DATE
+:realm-examples:gridViewExample:assembleDebug UP-TO-DATE
+:realm-examples:gridViewExample:checkReleaseManifest
+:realm-examples:gridViewExample:prepareReleaseDependencies
+:realm-examples:gridViewExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:gridViewExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:gridViewExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:gridViewExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:gridViewExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:gridViewExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:gridViewExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:gridViewExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:gridViewExample:generateReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processArm64-v8aReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArm64-v8aReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabi-v7aReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabi-v7aReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabiReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processArmeabiReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processMipsReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processMipsReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processX86ReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processX86ReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:processX86_64ReleaseManifest UP-TO-DATE
+:realm-examples:gridViewExample:processX86_64ReleaseResources UP-TO-DATE
+:realm-examples:gridViewExample:generateReleaseSources UP-TO-DATE
+:realm-examples:gridViewExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:gridViewExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:gridViewExample:prePackageMarkerForRelease
+:realm-examples:gridViewExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:gridViewExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:gridViewExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:gridViewExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:gridViewExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:gridViewExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:gridViewExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:gridViewExample:packageArm64-v8aRelease UP-TO-DATE
+:realm-examples:gridViewExample:assembleArm64-v8aRelease UP-TO-DATE
+:realm-examples:gridViewExample:packageArmeabi-v7aRelease UP-TO-DATE
+:realm-examples:gridViewExample:assembleArmeabi-v7aRelease UP-TO-DATE
+:realm-examples:gridViewExample:packageArmeabiRelease UP-TO-DATE
+:realm-examples:gridViewExample:assembleArmeabiRelease UP-TO-DATE
+:realm-examples:gridViewExample:packageMipsRelease UP-TO-DATE
+:realm-examples:gridViewExample:assembleMipsRelease UP-TO-DATE
+:realm-examples:gridViewExample:packageX86Release UP-TO-DATE
+:realm-examples:gridViewExample:assembleX86Release UP-TO-DATE
+:realm-examples:gridViewExample:packageX86_64Release UP-TO-DATE
+:realm-examples:gridViewExample:assembleX86_64Release UP-TO-DATE
+:realm-examples:gridViewExample:compileReleaseSources UP-TO-DATE
+:realm-examples:gridViewExample:lintVitalRelease
+:realm-examples:gridViewExample:assembleRelease
+:realm-examples:gridViewExample:assemble
+:realm-examples:introExample:preBuild UP-TO-DATE
+:realm-examples:introExample:preDebugBuild UP-TO-DATE
+:realm-examples:introExample:checkDebugManifest
+:realm-examples:introExample:preReleaseBuild UP-TO-DATE
+:realm-examples:introExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:introExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:introExample:prepareDebugDependencies
+:realm-examples:introExample:compileDebugAidl UP-TO-DATE
+:realm-examples:introExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:introExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:introExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:introExample:compileDebugShaders UP-TO-DATE
+:realm-examples:introExample:generateDebugAssets UP-TO-DATE
+:realm-examples:introExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:introExample:generateDebugResValues UP-TO-DATE
+:realm-examples:introExample:generateDebugResources UP-TO-DATE
+:realm-examples:introExample:mergeDebugResources UP-TO-DATE
+:realm-examples:introExample:processDebugManifest UP-TO-DATE
+:realm-examples:introExample:processDebugResources UP-TO-DATE
+:realm-examples:introExample:generateDebugSources UP-TO-DATE
+:realm-examples:introExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:introExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:introExample:compileDebugNdk UP-TO-DATE
+:realm-examples:introExample:compileDebugSources UP-TO-DATE
+:realm-examples:introExample:prePackageMarkerForDebug
+:realm-examples:introExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:introExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:introExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:introExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:introExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:introExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:introExample:validateDebugSigning
+:realm-examples:introExample:packageDebug UP-TO-DATE
+:realm-examples:introExample:zipalignDebug UP-TO-DATE
+:realm-examples:introExample:assembleDebug UP-TO-DATE
+:realm-examples:introExample:checkReleaseManifest
+:realm-examples:introExample:prepareReleaseDependencies
+:realm-examples:introExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:introExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:introExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:introExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:introExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:introExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:introExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:introExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:introExample:generateReleaseResources UP-TO-DATE
+:realm-examples:introExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:introExample:processReleaseManifest UP-TO-DATE
+:realm-examples:introExample:processReleaseResources UP-TO-DATE
+:realm-examples:introExample:generateReleaseSources UP-TO-DATE
+:realm-examples:introExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:introExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:introExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:introExample:compileReleaseSources UP-TO-DATE
+:realm-examples:introExample:lintVitalRelease
+:realm-examples:introExample:prePackageMarkerForRelease
+:realm-examples:introExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:introExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:introExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:introExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:introExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:introExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:introExample:packageRelease UP-TO-DATE
+:realm-examples:introExample:assembleRelease
+:realm-examples:introExample:assemble
+:realm-examples:jsonExample:preBuild UP-TO-DATE
+:realm-examples:jsonExample:preDebugBuild UP-TO-DATE
+:realm-examples:jsonExample:checkDebugManifest
+:realm-examples:jsonExample:preReleaseBuild UP-TO-DATE
+:realm-examples:jsonExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:jsonExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:jsonExample:prepareDebugDependencies
+:realm-examples:jsonExample:compileDebugAidl UP-TO-DATE
+:realm-examples:jsonExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:jsonExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:jsonExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:jsonExample:compileDebugShaders UP-TO-DATE
+:realm-examples:jsonExample:generateDebugAssets UP-TO-DATE
+:realm-examples:jsonExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:jsonExample:generateDebugResValues UP-TO-DATE
+:realm-examples:jsonExample:generateDebugResources UP-TO-DATE
+:realm-examples:jsonExample:mergeDebugResources UP-TO-DATE
+:realm-examples:jsonExample:processDebugManifest UP-TO-DATE
+:realm-examples:jsonExample:processDebugResources UP-TO-DATE
+:realm-examples:jsonExample:generateDebugSources UP-TO-DATE
+:realm-examples:jsonExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:jsonExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:jsonExample:compileDebugNdk UP-TO-DATE
+:realm-examples:jsonExample:compileDebugSources UP-TO-DATE
+:realm-examples:jsonExample:prePackageMarkerForDebug
+:realm-examples:jsonExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:jsonExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:jsonExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:jsonExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:jsonExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:jsonExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:jsonExample:validateDebugSigning
+:realm-examples:jsonExample:packageDebug UP-TO-DATE
+:realm-examples:jsonExample:zipalignDebug UP-TO-DATE
+:realm-examples:jsonExample:assembleDebug UP-TO-DATE
+:realm-examples:jsonExample:checkReleaseManifest
+:realm-examples:jsonExample:prepareReleaseDependencies
+:realm-examples:jsonExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:jsonExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:jsonExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:jsonExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:jsonExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:jsonExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:jsonExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:jsonExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:jsonExample:generateReleaseResources UP-TO-DATE
+:realm-examples:jsonExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:jsonExample:processReleaseManifest UP-TO-DATE
+:realm-examples:jsonExample:processReleaseResources UP-TO-DATE
+:realm-examples:jsonExample:generateReleaseSources UP-TO-DATE
+:realm-examples:jsonExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:jsonExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:jsonExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:jsonExample:compileReleaseSources UP-TO-DATE
+:realm-examples:jsonExample:lintVitalRelease
+:realm-examples:jsonExample:prePackageMarkerForRelease
+:realm-examples:jsonExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:jsonExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:jsonExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:jsonExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:jsonExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:jsonExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:jsonExample:packageRelease UP-TO-DATE
+:realm-examples:jsonExample:assembleRelease
+:realm-examples:jsonExample:assemble
+:realm-examples:kotlinExample:preBuild UP-TO-DATE
+:realm-examples:kotlinExample:preDebugBuild UP-TO-DATE
+:realm-examples:kotlinExample:checkDebugManifest
+:realm-examples:kotlinExample:preReleaseBuild UP-TO-DATE
+:realm-examples:kotlinExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:kotlinExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:kotlinExample:prepareDebugDependencies
+:realm-examples:kotlinExample:compileDebugAidl UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:kotlinExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:kotlinExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugShaders UP-TO-DATE
+:realm-examples:kotlinExample:generateDebugAssets UP-TO-DATE
+:realm-examples:kotlinExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:kotlinExample:generateDebugResValues UP-TO-DATE
+:realm-examples:kotlinExample:generateDebugResources UP-TO-DATE
+:realm-examples:kotlinExample:mergeDebugResources UP-TO-DATE
+:realm-examples:kotlinExample:processDebugManifest UP-TO-DATE
+:realm-examples:kotlinExample:processDebugResources UP-TO-DATE
+:realm-examples:kotlinExample:generateDebugSources UP-TO-DATE
+:realm-examples:kotlinExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugKotlin UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugNdk UP-TO-DATE
+:realm-examples:kotlinExample:compileDebugSources UP-TO-DATE
+:realm-examples:kotlinExample:prePackageMarkerForDebug
+:realm-examples:kotlinExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:kotlinExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:kotlinExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:kotlinExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:kotlinExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:kotlinExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:kotlinExample:validateDebugSigning
+:realm-examples:kotlinExample:packageDebug UP-TO-DATE
+:realm-examples:kotlinExample:zipalignDebug UP-TO-DATE
+:realm-examples:kotlinExample:assembleDebug UP-TO-DATE
+:realm-examples:kotlinExample:checkReleaseManifest
+:realm-examples:kotlinExample:prepareReleaseDependencies
+:realm-examples:kotlinExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:kotlinExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:kotlinExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:kotlinExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:kotlinExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:kotlinExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:kotlinExample:generateReleaseResources UP-TO-DATE
+:realm-examples:kotlinExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:kotlinExample:processReleaseManifest UP-TO-DATE
+:realm-examples:kotlinExample:processReleaseResources UP-TO-DATE
+:realm-examples:kotlinExample:generateReleaseSources UP-TO-DATE
+:realm-examples:kotlinExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseKotlin UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:kotlinExample:compileReleaseSources UP-TO-DATE
+:realm-examples:kotlinExample:lintVitalRelease
+:realm-examples:kotlinExample:prePackageMarkerForRelease
+:realm-examples:kotlinExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:kotlinExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:kotlinExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:kotlinExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:kotlinExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:kotlinExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:kotlinExample:packageRelease UP-TO-DATE
+:realm-examples:kotlinExample:assembleRelease
+:realm-examples:kotlinExample:assemble
+:realm-examples:migrationExample:preBuild UP-TO-DATE
+:realm-examples:migrationExample:preDebugBuild UP-TO-DATE
+:realm-examples:migrationExample:checkDebugManifest
+:realm-examples:migrationExample:preReleaseBuild UP-TO-DATE
+:realm-examples:migrationExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:migrationExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:migrationExample:prepareDebugDependencies
+:realm-examples:migrationExample:compileDebugAidl UP-TO-DATE
+:realm-examples:migrationExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:migrationExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:migrationExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:migrationExample:compileDebugShaders UP-TO-DATE
+:realm-examples:migrationExample:generateDebugAssets UP-TO-DATE
+:realm-examples:migrationExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:migrationExample:generateDebugResValues UP-TO-DATE
+:realm-examples:migrationExample:generateDebugResources UP-TO-DATE
+:realm-examples:migrationExample:mergeDebugResources UP-TO-DATE
+:realm-examples:migrationExample:processDebugManifest UP-TO-DATE
+:realm-examples:migrationExample:processDebugResources UP-TO-DATE
+:realm-examples:migrationExample:generateDebugSources UP-TO-DATE
+:realm-examples:migrationExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:migrationExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:migrationExample:compileDebugNdk UP-TO-DATE
+:realm-examples:migrationExample:compileDebugSources UP-TO-DATE
+:realm-examples:migrationExample:prePackageMarkerForDebug
+:realm-examples:migrationExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:migrationExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:migrationExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:migrationExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:migrationExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:migrationExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:migrationExample:validateDebugSigning
+:realm-examples:migrationExample:packageDebug UP-TO-DATE
+:realm-examples:migrationExample:zipalignDebug UP-TO-DATE
+:realm-examples:migrationExample:assembleDebug UP-TO-DATE
+:realm-examples:migrationExample:checkReleaseManifest
+:realm-examples:migrationExample:prepareReleaseDependencies
+:realm-examples:migrationExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:migrationExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:migrationExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:migrationExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:migrationExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:migrationExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:migrationExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:migrationExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:migrationExample:generateReleaseResources UP-TO-DATE
+:realm-examples:migrationExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:migrationExample:processReleaseManifest UP-TO-DATE
+:realm-examples:migrationExample:processReleaseResources UP-TO-DATE
+:realm-examples:migrationExample:generateReleaseSources UP-TO-DATE
+:realm-examples:migrationExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:migrationExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:migrationExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:migrationExample:compileReleaseSources UP-TO-DATE
+:realm-examples:migrationExample:lintVitalRelease
+:realm-examples:migrationExample:prePackageMarkerForRelease
+:realm-examples:migrationExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:migrationExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:migrationExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:migrationExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:migrationExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:migrationExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:migrationExample:packageRelease UP-TO-DATE
+:realm-examples:migrationExample:assembleRelease
+:realm-examples:migrationExample:assemble
+:realm-examples:newsreaderExample:preBuild UP-TO-DATE
+:realm-examples:newsreaderExample:preDebugBuild UP-TO-DATE
+:realm-examples:newsreaderExample:checkDebugManifest
+:realm-examples:newsreaderExample:preReleaseBuild UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportAnimatedVectorDrawable2400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportAppcompatV72400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportDesign2400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportRecyclerviewV72400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportSupportV42400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComAndroidSupportSupportVectorDrawable2400Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareComJakewhartonTimberTimber410Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareIoReactivexRxandroid110Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:newsreaderExample:prepareMeZhanghaiAndroidMaterialprogressbarLibrary114Library UP-TO-DATE
+:realm-examples:newsreaderExample:prepareDebugDependencies
+:realm-examples:newsreaderExample:compileDebugAidl UP-TO-DATE
+:realm-examples:newsreaderExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:newsreaderExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:newsreaderExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:newsreaderExample:compileDebugShaders UP-TO-DATE
+:realm-examples:newsreaderExample:generateDebugAssets UP-TO-DATE
+:realm-examples:newsreaderExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:newsreaderExample:generateDebugResValues UP-TO-DATE
+:realm-examples:newsreaderExample:generateDebugResources UP-TO-DATE
+:realm-examples:newsreaderExample:mergeDebugResources UP-TO-DATE
+:realm-examples:newsreaderExample:processDebugManifest UP-TO-DATE
+:realm-examples:newsreaderExample:processDebugResources UP-TO-DATE
+:realm-examples:newsreaderExample:generateDebugSources UP-TO-DATE
+:realm-examples:newsreaderExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:newsreaderExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:newsreaderExample:compileDebugNdk UP-TO-DATE
+:realm-examples:newsreaderExample:compileDebugSources UP-TO-DATE
+:realm-examples:newsreaderExample:prePackageMarkerForDebug
+:realm-examples:newsreaderExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:newsreaderExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:newsreaderExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:newsreaderExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:newsreaderExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:newsreaderExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:newsreaderExample:validateDebugSigning
+:realm-examples:newsreaderExample:packageDebug UP-TO-DATE
+:realm-examples:newsreaderExample:zipalignDebug UP-TO-DATE
+:realm-examples:newsreaderExample:assembleDebug UP-TO-DATE
+:realm-examples:newsreaderExample:checkReleaseManifest
+:realm-examples:newsreaderExample:prepareReleaseDependencies
+:realm-examples:newsreaderExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:newsreaderExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:newsreaderExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:newsreaderExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:newsreaderExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:newsreaderExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:newsreaderExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:newsreaderExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:newsreaderExample:generateReleaseResources UP-TO-DATE
+:realm-examples:newsreaderExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:newsreaderExample:processReleaseManifest UP-TO-DATE
+:realm-examples:newsreaderExample:processReleaseResources UP-TO-DATE
+:realm-examples:newsreaderExample:generateReleaseSources UP-TO-DATE
+:realm-examples:newsreaderExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:newsreaderExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:newsreaderExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:newsreaderExample:compileReleaseSources UP-TO-DATE
+:realm-examples:newsreaderExample:lintVitalRelease
+:realm-examples:newsreaderExample:prePackageMarkerForRelease
+:realm-examples:newsreaderExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:newsreaderExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:newsreaderExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:newsreaderExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:newsreaderExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:newsreaderExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:newsreaderExample:packageRelease UP-TO-DATE
+:realm-examples:newsreaderExample:assembleRelease
+:realm-examples:newsreaderExample:assemble
+:realm-examples:rxJavaExample:preBuild UP-TO-DATE
+:realm-examples:rxJavaExample:preDebugBuild UP-TO-DATE
+:realm-examples:rxJavaExample:checkDebugManifest
+:realm-examples:rxJavaExample:preReleaseBuild UP-TO-DATE
+:realm-examples:rxJavaExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:rxJavaExample:prepareComJakewhartonRxbindingRxbinding030Library UP-TO-DATE
+:realm-examples:rxJavaExample:prepareIoReactivexRxandroid110Library UP-TO-DATE
+:realm-examples:rxJavaExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:rxJavaExample:prepareDebugDependencies
+:realm-examples:rxJavaExample:compileDebugAidl UP-TO-DATE
+:realm-examples:rxJavaExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:rxJavaExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:rxJavaExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:rxJavaExample:compileDebugShaders UP-TO-DATE
+:realm-examples:rxJavaExample:generateDebugAssets UP-TO-DATE
+:realm-examples:rxJavaExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:rxJavaExample:generateDebugResValues UP-TO-DATE
+:realm-examples:rxJavaExample:generateDebugResources UP-TO-DATE
+:realm-examples:rxJavaExample:mergeDebugResources UP-TO-DATE
+:realm-examples:rxJavaExample:processDebugManifest UP-TO-DATE
+:realm-examples:rxJavaExample:processDebugResources UP-TO-DATE
+:realm-examples:rxJavaExample:generateDebugSources UP-TO-DATE
+:realm-examples:rxJavaExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:rxJavaExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:rxJavaExample:compileDebugNdk UP-TO-DATE
+:realm-examples:rxJavaExample:compileDebugSources UP-TO-DATE
+:realm-examples:rxJavaExample:prePackageMarkerForDebug
+:realm-examples:rxJavaExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:rxJavaExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:rxJavaExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:rxJavaExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:rxJavaExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:rxJavaExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:rxJavaExample:validateDebugSigning
+:realm-examples:rxJavaExample:packageDebug UP-TO-DATE
+:realm-examples:rxJavaExample:zipalignDebug UP-TO-DATE
+:realm-examples:rxJavaExample:assembleDebug UP-TO-DATE
+:realm-examples:rxJavaExample:checkReleaseManifest
+:realm-examples:rxJavaExample:prepareReleaseDependencies
+:realm-examples:rxJavaExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:rxJavaExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:rxJavaExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:rxJavaExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:rxJavaExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:rxJavaExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:rxJavaExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:rxJavaExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:rxJavaExample:generateReleaseResources UP-TO-DATE
+:realm-examples:rxJavaExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:rxJavaExample:processReleaseManifest UP-TO-DATE
+:realm-examples:rxJavaExample:processReleaseResources UP-TO-DATE
+:realm-examples:rxJavaExample:generateReleaseSources UP-TO-DATE
+:realm-examples:rxJavaExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:rxJavaExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:rxJavaExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:rxJavaExample:compileReleaseSources UP-TO-DATE
+:realm-examples:rxJavaExample:lintVitalRelease
+:realm-examples:rxJavaExample:prePackageMarkerForRelease
+:realm-examples:rxJavaExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:rxJavaExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:rxJavaExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:rxJavaExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:rxJavaExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:rxJavaExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:rxJavaExample:packageRelease UP-TO-DATE
+:realm-examples:rxJavaExample:assembleRelease
+:realm-examples:rxJavaExample:assemble
+:realm-examples:threadExample:preBuild UP-TO-DATE
+:realm-examples:threadExample:preDebugBuild UP-TO-DATE
+:realm-examples:threadExample:checkDebugManifest
+:realm-examples:threadExample:preReleaseBuild UP-TO-DATE
+:realm-examples:threadExample:prepareComAndroidSupportAnimatedVectorDrawable2400Library UP-TO-DATE
+:realm-examples:threadExample:prepareComAndroidSupportAppcompatV72400Library UP-TO-DATE
+:realm-examples:threadExample:prepareComAndroidSupportSupportV42400Library UP-TO-DATE
+:realm-examples:threadExample:prepareComAndroidSupportSupportVectorDrawable2400Library UP-TO-DATE
+:realm-examples:threadExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:threadExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:threadExample:prepareDebugDependencies
+:realm-examples:threadExample:compileDebugAidl UP-TO-DATE
+:realm-examples:threadExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:threadExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:threadExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:threadExample:compileDebugShaders UP-TO-DATE
+:realm-examples:threadExample:generateDebugAssets UP-TO-DATE
+:realm-examples:threadExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:threadExample:generateDebugResValues UP-TO-DATE
+:realm-examples:threadExample:generateDebugResources UP-TO-DATE
+:realm-examples:threadExample:mergeDebugResources UP-TO-DATE
+:realm-examples:threadExample:processDebugManifest UP-TO-DATE
+:realm-examples:threadExample:processDebugResources UP-TO-DATE
+:realm-examples:threadExample:generateDebugSources UP-TO-DATE
+:realm-examples:threadExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:threadExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:threadExample:compileDebugNdk UP-TO-DATE
+:realm-examples:threadExample:compileDebugSources UP-TO-DATE
+:realm-examples:threadExample:prePackageMarkerForDebug
+:realm-examples:threadExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:threadExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:threadExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:threadExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:threadExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:threadExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:threadExample:validateDebugSigning
+:realm-examples:threadExample:packageDebug UP-TO-DATE
+:realm-examples:threadExample:zipalignDebug UP-TO-DATE
+:realm-examples:threadExample:assembleDebug UP-TO-DATE
+:realm-examples:threadExample:checkReleaseManifest
+:realm-examples:threadExample:prepareReleaseDependencies
+:realm-examples:threadExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:threadExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:threadExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:threadExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:threadExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:threadExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:threadExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:threadExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:threadExample:generateReleaseResources UP-TO-DATE
+:realm-examples:threadExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:threadExample:processReleaseManifest UP-TO-DATE
+:realm-examples:threadExample:processReleaseResources UP-TO-DATE
+:realm-examples:threadExample:generateReleaseSources UP-TO-DATE
+:realm-examples:threadExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:threadExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:threadExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:threadExample:compileReleaseSources UP-TO-DATE
+:realm-examples:threadExample:lintVitalRelease
+:realm-examples:threadExample:prePackageMarkerForRelease
+:realm-examples:threadExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:threadExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:threadExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:threadExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:threadExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:threadExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:threadExample:packageRelease UP-TO-DATE
+:realm-examples:threadExample:assembleRelease
+:realm-examples:threadExample:assemble
+:realm-examples:unitTestExample:preBuild UP-TO-DATE
+:realm-examples:unitTestExample:preDebugBuild UP-TO-DATE
+:realm-examples:unitTestExample:checkDebugManifest
+:realm-examples:unitTestExample:preReleaseBuild UP-TO-DATE
+:realm-examples:unitTestExample:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:unitTestExample:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:unitTestExample:prepareDebugDependencies
+:realm-examples:unitTestExample:compileDebugAidl UP-TO-DATE
+:realm-examples:unitTestExample:compileDebugRenderscript UP-TO-DATE
+:realm-examples:unitTestExample:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:unitTestExample:mergeDebugShaders UP-TO-DATE
+:realm-examples:unitTestExample:compileDebugShaders UP-TO-DATE
+:realm-examples:unitTestExample:generateDebugAssets UP-TO-DATE
+:realm-examples:unitTestExample:mergeDebugAssets UP-TO-DATE
+:realm-examples:unitTestExample:generateDebugResValues UP-TO-DATE
+:realm-examples:unitTestExample:generateDebugResources UP-TO-DATE
+:realm-examples:unitTestExample:mergeDebugResources UP-TO-DATE
+:realm-examples:unitTestExample:processDebugManifest UP-TO-DATE
+:realm-examples:unitTestExample:processDebugResources UP-TO-DATE
+:realm-examples:unitTestExample:generateDebugSources UP-TO-DATE
+:realm-examples:unitTestExample:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:unitTestExample:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:unitTestExample:compileDebugNdk UP-TO-DATE
+:realm-examples:unitTestExample:compileDebugSources UP-TO-DATE
+:realm-examples:unitTestExample:prePackageMarkerForDebug
+:realm-examples:unitTestExample:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:unitTestExample:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:unitTestExample:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:unitTestExample:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:unitTestExample:processDebugJavaRes UP-TO-DATE
+:realm-examples:unitTestExample:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:unitTestExample:validateDebugSigning
+:realm-examples:unitTestExample:packageDebug UP-TO-DATE
+:realm-examples:unitTestExample:zipalignDebug UP-TO-DATE
+:realm-examples:unitTestExample:assembleDebug UP-TO-DATE
+:realm-examples:unitTestExample:checkReleaseManifest
+:realm-examples:unitTestExample:prepareReleaseDependencies
+:realm-examples:unitTestExample:compileReleaseAidl UP-TO-DATE
+:realm-examples:unitTestExample:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:unitTestExample:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:unitTestExample:mergeReleaseShaders UP-TO-DATE
+:realm-examples:unitTestExample:compileReleaseShaders UP-TO-DATE
+:realm-examples:unitTestExample:generateReleaseAssets UP-TO-DATE
+:realm-examples:unitTestExample:mergeReleaseAssets UP-TO-DATE
+:realm-examples:unitTestExample:generateReleaseResValues UP-TO-DATE
+:realm-examples:unitTestExample:generateReleaseResources UP-TO-DATE
+:realm-examples:unitTestExample:mergeReleaseResources UP-TO-DATE
+:realm-examples:unitTestExample:processReleaseManifest UP-TO-DATE
+:realm-examples:unitTestExample:processReleaseResources UP-TO-DATE
+:realm-examples:unitTestExample:generateReleaseSources UP-TO-DATE
+:realm-examples:unitTestExample:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:unitTestExample:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:unitTestExample:compileReleaseNdk UP-TO-DATE
+:realm-examples:unitTestExample:compileReleaseSources UP-TO-DATE
+:realm-examples:unitTestExample:lintVitalRelease
+:realm-examples:unitTestExample:prePackageMarkerForRelease
+:realm-examples:unitTestExample:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:unitTestExample:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:unitTestExample:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:unitTestExample:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:unitTestExample:processReleaseJavaRes UP-TO-DATE
+:realm-examples:unitTestExample:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:unitTestExample:packageRelease UP-TO-DATE
+:realm-examples:unitTestExample:assembleRelease
+:realm-examples:unitTestExample:assemble
+:realm-examples:moduleExample:app:preBuild UP-TO-DATE
+:realm-examples:moduleExample:app:preDebugBuild UP-TO-DATE
+:realm-examples:moduleExample:app:checkDebugManifest
+:realm-examples:moduleExample:app:preReleaseBuild UP-TO-DATE
+:realm-examples:moduleExample:library:preBuild UP-TO-DATE
+:realm-examples:moduleExample:library:preReleaseBuild UP-TO-DATE
+:realm-examples:moduleExample:library:compileReleaseNdk UP-TO-DATE
+:realm-examples:moduleExample:library:compileLint
+:realm-examples:moduleExample:library:copyReleaseLint UP-TO-DATE
+:realm-examples:moduleExample:library:mergeReleaseProguardFiles UP-TO-DATE
+:realm-examples:moduleExample:library:packageReleaseRenderscript UP-TO-DATE
+:realm-examples:moduleExample:library:checkReleaseManifest
+:realm-examples:moduleExample:library:preDebugAndroidTestBuild UP-TO-DATE
+:realm-examples:moduleExample:library:preDebugBuild UP-TO-DATE
+:realm-examples:moduleExample:library:preDebugUnitTestBuild UP-TO-DATE
+:realm-examples:moduleExample:library:preReleaseUnitTestBuild UP-TO-DATE
+:realm-examples:moduleExample:library:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:moduleExample:library:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:moduleExample:library:prepareReleaseDependencies
+:realm-examples:moduleExample:library:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:moduleExample:library:generateReleaseResValues UP-TO-DATE
+:realm-examples:moduleExample:library:generateReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:library:packageReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:library:compileReleaseAidl UP-TO-DATE
+:realm-examples:moduleExample:library:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:moduleExample:library:mergeReleaseShaders UP-TO-DATE
+:realm-examples:moduleExample:library:compileReleaseShaders UP-TO-DATE
+:realm-examples:moduleExample:library:generateReleaseAssets UP-TO-DATE
+:realm-examples:moduleExample:library:mergeReleaseAssets UP-TO-DATE
+:realm-examples:moduleExample:library:mergeReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:library:processReleaseManifest UP-TO-DATE
+:realm-examples:moduleExample:library:processReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:library:generateReleaseSources UP-TO-DATE
+:realm-examples:moduleExample:library:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:moduleExample:library:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:moduleExample:library:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:moduleExample:library:processReleaseJavaRes UP-TO-DATE
+:realm-examples:moduleExample:library:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:moduleExample:library:transformClassesAndResourcesWithSyncLibJarsForRelease UP-TO-DATE
+:realm-examples:moduleExample:library:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:moduleExample:library:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:moduleExample:library:transformNative_libsWithSyncJniLibsForRelease UP-TO-DATE
+:realm-examples:moduleExample:library:bundleRelease UP-TO-DATE
+:realm-examples:moduleExample:app:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:realm-examples:moduleExample:app:prepareIoRealmLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:moduleExample:app:prepareIoRealmRealmAndroidLibrary120SNAPSHOTLibrary UP-TO-DATE
+:realm-examples:moduleExample:app:prepareDebugDependencies
+:realm-examples:moduleExample:app:compileDebugAidl UP-TO-DATE
+:realm-examples:moduleExample:app:compileDebugRenderscript UP-TO-DATE
+:realm-examples:moduleExample:app:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:moduleExample:app:mergeDebugShaders UP-TO-DATE
+:realm-examples:moduleExample:app:compileDebugShaders UP-TO-DATE
+:realm-examples:moduleExample:app:generateDebugAssets UP-TO-DATE
+:realm-examples:moduleExample:app:mergeDebugAssets UP-TO-DATE
+:realm-examples:moduleExample:app:generateDebugResValues UP-TO-DATE
+:realm-examples:moduleExample:app:generateDebugResources UP-TO-DATE
+:realm-examples:moduleExample:app:mergeDebugResources UP-TO-DATE
+:realm-examples:moduleExample:app:processDebugManifest UP-TO-DATE
+:realm-examples:moduleExample:app:processDebugResources UP-TO-DATE
+:realm-examples:moduleExample:app:generateDebugSources UP-TO-DATE
+:realm-examples:moduleExample:app:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:moduleExample:app:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:moduleExample:app:compileDebugNdk UP-TO-DATE
+:realm-examples:moduleExample:app:compileDebugSources UP-TO-DATE
+:realm-examples:moduleExample:app:prePackageMarkerForDebug
+:realm-examples:moduleExample:app:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:moduleExample:app:transformClassesWithDexForDebug UP-TO-DATE
+:realm-examples:moduleExample:app:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:moduleExample:app:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:moduleExample:app:processDebugJavaRes UP-TO-DATE
+:realm-examples:moduleExample:app:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:moduleExample:app:validateDebugSigning
+:realm-examples:moduleExample:app:packageDebug UP-TO-DATE
+:realm-examples:moduleExample:app:zipalignDebug UP-TO-DATE
+:realm-examples:moduleExample:app:assembleDebug UP-TO-DATE
+:realm-examples:moduleExample:app:checkReleaseManifest
+:realm-examples:moduleExample:app:prepareReleaseDependencies
+:realm-examples:moduleExample:app:compileReleaseAidl UP-TO-DATE
+:realm-examples:moduleExample:app:compileReleaseRenderscript UP-TO-DATE
+:realm-examples:moduleExample:app:generateReleaseBuildConfig UP-TO-DATE
+:realm-examples:moduleExample:app:mergeReleaseShaders UP-TO-DATE
+:realm-examples:moduleExample:app:compileReleaseShaders UP-TO-DATE
+:realm-examples:moduleExample:app:generateReleaseAssets UP-TO-DATE
+:realm-examples:moduleExample:app:mergeReleaseAssets UP-TO-DATE
+:realm-examples:moduleExample:app:generateReleaseResValues UP-TO-DATE
+:realm-examples:moduleExample:app:generateReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:app:mergeReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:app:processReleaseManifest UP-TO-DATE
+:realm-examples:moduleExample:app:processReleaseResources UP-TO-DATE
+:realm-examples:moduleExample:app:generateReleaseSources UP-TO-DATE
+:realm-examples:moduleExample:app:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:moduleExample:app:compileReleaseJavaWithJavac UP-TO-DATE
+:realm-examples:moduleExample:app:compileReleaseNdk UP-TO-DATE
+:realm-examples:moduleExample:app:compileReleaseSources UP-TO-DATE
+:realm-examples:moduleExample:app:lintVitalRelease
+:realm-examples:moduleExample:app:prePackageMarkerForRelease
+:realm-examples:moduleExample:app:transformClassesWithRealmTransformerForRelease UP-TO-DATE
+:realm-examples:moduleExample:app:processReleaseJavaRes UP-TO-DATE
+:realm-examples:moduleExample:app:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:realm-examples:moduleExample:app:transformClassesAndResourcesWithProguardForRelease UP-TO-DATE
+:realm-examples:moduleExample:app:transformClassesWithDexForRelease UP-TO-DATE
+:realm-examples:moduleExample:app:mergeReleaseJniLibFolders UP-TO-DATE
+:realm-examples:moduleExample:app:transformNative_libsWithMergeJniLibsForRelease UP-TO-DATE
+:realm-examples:moduleExample:app:validateReleaseSigning
+:realm-examples:moduleExample:app:packageRelease UP-TO-DATE
+:realm-examples:moduleExample:app:zipalignRelease UP-TO-DATE
+:realm-examples:moduleExample:app:assembleRelease
+:realm-examples:moduleExample:app:assemble
+:realm-examples:moduleExample:library:compileDebugNdk UP-TO-DATE
+:realm-examples:moduleExample:library:copyDebugLint UP-TO-DATE
+:realm-examples:moduleExample:library:mergeDebugProguardFiles UP-TO-DATE
+:realm-examples:moduleExample:library:packageDebugRenderscript UP-TO-DATE
+:realm-examples:moduleExample:library:checkDebugManifest
+:realm-examples:moduleExample:library:prepareDebugDependencies
+:realm-examples:moduleExample:library:compileDebugRenderscript UP-TO-DATE
+:realm-examples:moduleExample:library:generateDebugResValues UP-TO-DATE
+:realm-examples:moduleExample:library:generateDebugResources UP-TO-DATE
+:realm-examples:moduleExample:library:packageDebugResources UP-TO-DATE
+:realm-examples:moduleExample:library:compileDebugAidl UP-TO-DATE
+:realm-examples:moduleExample:library:generateDebugBuildConfig UP-TO-DATE
+:realm-examples:moduleExample:library:mergeDebugShaders UP-TO-DATE
+:realm-examples:moduleExample:library:compileDebugShaders UP-TO-DATE
+:realm-examples:moduleExample:library:generateDebugAssets UP-TO-DATE
+:realm-examples:moduleExample:library:mergeDebugAssets UP-TO-DATE
+:realm-examples:moduleExample:library:mergeDebugResources UP-TO-DATE
+:realm-examples:moduleExample:library:processDebugManifest UP-TO-DATE
+:realm-examples:moduleExample:library:processDebugResources UP-TO-DATE
+:realm-examples:moduleExample:library:generateDebugSources UP-TO-DATE
+:realm-examples:moduleExample:library:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:realm-examples:moduleExample:library:compileDebugJavaWithJavac UP-TO-DATE
+:realm-examples:moduleExample:library:transformClassesWithRealmTransformerForDebug UP-TO-DATE
+:realm-examples:moduleExample:library:processDebugJavaRes UP-TO-DATE
+:realm-examples:moduleExample:library:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:realm-examples:moduleExample:library:transformClassesAndResourcesWithSyncLibJarsForDebug UP-TO-DATE
+:realm-examples:moduleExample:library:mergeDebugJniLibFolders UP-TO-DATE
+:realm-examples:moduleExample:library:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:realm-examples:moduleExample:library:transformNative_libsWithSyncJniLibsForDebug UP-TO-DATE
+:realm-examples:moduleExample:library:bundleDebug UP-TO-DATE
+:realm-examples:moduleExample:library:compileDebugSources UP-TO-DATE
+:realm-examples:moduleExample:library:assembleDebug UP-TO-DATE
+:realm-examples:moduleExample:library:compileReleaseSources UP-TO-DATE
+:realm-examples:moduleExample:library:assembleRelease UP-TO-DATE
+:realm-examples:moduleExample:library:assemble UP-TO-DATE
+:assemble
+
+BUILD SUCCESSFUL
+
+Total time: 55.557 secs

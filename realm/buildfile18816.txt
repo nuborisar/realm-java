@@ -1,0 +1,239 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/2.10/userguide/gradle_daemon.html.
+Incremental java compilation is an incubating feature.
+[buildinfo] Not using buildInfo properties file for this build.
+:realm-annotations-processor:generateVersionClass
+:realm-annotations-processor:compileJava
+:realm-annotations-processor:processResources
+:realm-annotations-processor:classes
+:realm-annotations-processor:jar
+:realm-annotations-processor:assemble
+:realm-jni:downloadCore
+Download http://static.realm.io/downloads/core/realm-core-android-1.5.0.tar.gz
+:realm-jni:deployCore
+:realm-jni:generateNdkToolchainArm
+Copying prebuilt binaries...
+Copying sysroot headers and libraries...
+Copying c++ runtime headers and libraries...
+Copying files to: /realm-java/realm/realm-jni/build/standalone-toolchains/arm
+Cleaning up...
+Done.
+:realm-jni:buildAndroidJniArm
+make: Entering directory '/realm-java/realm/realm-jni/src'
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c mem_usage.cpp -o mem_usage-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-arm.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -MMD -MP -c util.cpp -o util-arm.pic.o
+arm-linux-androideabi-g++ -shared -Os -pthread io_realm_internal_Group-arm.pic.o io_realm_internal_LinkView-arm.pic.o io_realm_internal_SharedGroup-arm.pic.o io_realm_internal_TableQuery-arm.pic.o io_realm_internal_UncheckedRow-arm.pic.o io_realm_internal_Util-arm.pic.o java_lang_List_Util-arm.pic.o io_realm_internal_Table-arm.pic.o mem_usage-arm.pic.o io_realm_internal_CheckedRow-arm.pic.o io_realm_internal_TableView-arm.pic.o util-arm.pic.o -lrealm-android-arm -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -o librealm-jni-arm.so
+arm-linux-androideabi-strip -o librealm-jni-arm-stripped.so -s librealm-jni-arm.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniArm
+:realm-jni:buildAndroidJniArm-v7a
+make: Entering directory '/realm-java/realm/realm-jni/src'
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c mem_usage.cpp -o mem_usage-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-arm-v7a.pic.o
+arm-linux-androideabi-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -MMD -MP -c util.cpp -o util-arm-v7a.pic.o
+arm-linux-androideabi-g++ -shared -Os -pthread io_realm_internal_Group-arm-v7a.pic.o io_realm_internal_LinkView-arm-v7a.pic.o io_realm_internal_SharedGroup-arm-v7a.pic.o io_realm_internal_UncheckedRow-arm-v7a.pic.o io_realm_internal_Util-arm-v7a.pic.o java_lang_List_Util-arm-v7a.pic.o io_realm_internal_Table-arm-v7a.pic.o mem_usage-arm-v7a.pic.o io_realm_internal_TableQuery-arm-v7a.pic.o io_realm_internal_CheckedRow-arm-v7a.pic.o io_realm_internal_TableView-arm-v7a.pic.o util-arm-v7a.pic.o -lrealm-android-arm-v7a -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -mthumb -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -o librealm-jni-arm-v7a.so
+arm-linux-androideabi-strip -o librealm-jni-arm-v7a-stripped.so -s librealm-jni-arm-v7a.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniArm-v7a
+:realm-jni:generateNdkToolchainArm64
+Copying prebuilt binaries...
+Copying sysroot headers and libraries...
+Copying c++ runtime headers and libraries...
+Copying files to: /realm-java/realm/realm-jni/build/standalone-toolchains/arm64
+Cleaning up...
+Done.
+:realm-jni:buildAndroidJniArm64
+make: Entering directory '/realm-java/realm/realm-jni/src'
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c mem_usage.cpp -o mem_usage-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-arm64.pic.o
+aarch64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c util.cpp -o util-arm64.pic.o
+aarch64-linux-android-g++ -shared -Os -pthread io_realm_internal_Group-arm64.pic.o io_realm_internal_UncheckedRow-arm64.pic.o io_realm_internal_LinkView-arm64.pic.o io_realm_internal_Util-arm64.pic.o java_lang_List_Util-arm64.pic.o io_realm_internal_TableQuery-arm64.pic.o io_realm_internal_Table-arm64.pic.o mem_usage-arm64.pic.o io_realm_internal_SharedGroup-arm64.pic.o io_realm_internal_CheckedRow-arm64.pic.o io_realm_internal_TableView-arm64.pic.o util-arm64.pic.o -lrealm-android-arm64 -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -o librealm-jni-arm64.so
+aarch64-linux-android-strip -o librealm-jni-arm64-stripped.so -s librealm-jni-arm64.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniArm64
+:realm-jni:generateNdkToolchainMips
+Copying prebuilt binaries...
+Copying sysroot headers and libraries...
+Copying c++ runtime headers and libraries...
+Copying files to: /realm-java/realm/realm-jni/build/standalone-toolchains/mips
+Cleaning up...
+Done.
+:realm-jni:buildAndroidJniMips
+make: Entering directory '/realm-java/realm/realm-jni/src'
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c mem_usage.cpp -o mem_usage-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-mips.pic.o
+mipsel-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c util.cpp -o util-mips.pic.o
+mipsel-linux-android-g++ -shared -Os -pthread io_realm_internal_Group-mips.pic.o io_realm_internal_SharedGroup-mips.pic.o io_realm_internal_UncheckedRow-mips.pic.o io_realm_internal_LinkView-mips.pic.o io_realm_internal_Util-mips.pic.o java_lang_List_Util-mips.pic.o io_realm_internal_TableQuery-mips.pic.o mem_usage-mips.pic.o io_realm_internal_Table-mips.pic.o io_realm_internal_CheckedRow-mips.pic.o io_realm_internal_TableView-mips.pic.o util-mips.pic.o -lrealm-android-mips -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -o librealm-jni-mips.so
+mipsel-linux-android-strip -o librealm-jni-mips-stripped.so -s librealm-jni-mips.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniMips
+:realm-jni:generateNdkToolchainX86
+Copying prebuilt binaries...
+Copying sysroot headers and libraries...
+Copying c++ runtime headers and libraries...
+Copying files to: /realm-java/realm/realm-jni/build/standalone-toolchains/x86
+Cleaning up...
+Done.
+:realm-jni:buildAndroidJniX86
+make: Entering directory '/realm-java/realm/realm-jni/src'
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c mem_usage.cpp -o mem_usage-x86.pic.o
+i686-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c util.cpp -o util-x86.pic.o
+i686-linux-android-g++ -shared -Os -pthread io_realm_internal_Group-x86.pic.o io_realm_internal_CheckedRow-x86.pic.o io_realm_internal_TableQuery-x86.pic.o io_realm_internal_Table-x86.pic.o io_realm_internal_SharedGroup-x86.pic.o io_realm_internal_TableView-x86.pic.o io_realm_internal_LinkView-x86.pic.o io_realm_internal_UncheckedRow-x86.pic.o io_realm_internal_Util-x86.pic.o java_lang_List_Util-x86.pic.o mem_usage-x86.pic.o util-x86.pic.o -lrealm-android-x86 -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -o librealm-jni-x86.so
+i686-linux-android-strip -o librealm-jni-x86-stripped.so -s librealm-jni-x86.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniX86
+:realm-jni:generateNdkToolchainX86_64
+Copying prebuilt binaries...
+Copying sysroot headers and libraries...
+Copying c++ runtime headers and libraries...
+Copying files to: /realm-java/realm/realm-jni/build/standalone-toolchains/x86_64
+Cleaning up...
+Done.
+:realm-jni:buildAndroidJniX86_64
+make: Entering directory '/realm-java/realm/realm-jni/src'
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Group.cpp -o io_realm_internal_Group-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableQuery.cpp -o io_realm_internal_TableQuery-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_LinkView.cpp -o io_realm_internal_LinkView-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_CheckedRow.cpp -o io_realm_internal_CheckedRow-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Table.cpp -o io_realm_internal_Table-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_TableView.cpp -o io_realm_internal_TableView-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_SharedGroup.cpp -o io_realm_internal_SharedGroup-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_UncheckedRow.cpp -o io_realm_internal_UncheckedRow-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c io_realm_internal_Util.cpp -o io_realm_internal_Util-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c java_lang_List_Util.cpp -o java_lang_List_Util-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c mem_usage.cpp -o mem_usage-x86_64.pic.o
+x86_64-linux-android-gcc -Os -DNDEBUG -fPIC -DPIC -pthread -Wall -Wextra -ansi -pedantic -Wno-long-long -DANDROID -Wno-variadic-macros -DREALM_HAVE_CONFIG -DPIC -I/realm-java/realm/realm-jni/build/core-1.5.0/include -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -MMD -MP -c util.cpp -o util-x86_64.pic.o
+x86_64-linux-android-g++ -shared -Os -pthread io_realm_internal_Group-x86_64.pic.o io_realm_internal_TableQuery-x86_64.pic.o io_realm_internal_LinkView-x86_64.pic.o io_realm_internal_CheckedRow-x86_64.pic.o io_realm_internal_Table-x86_64.pic.o io_realm_internal_TableView-x86_64.pic.o io_realm_internal_SharedGroup-x86_64.pic.o io_realm_internal_UncheckedRow-x86_64.pic.o io_realm_internal_Util-x86_64.pic.o java_lang_List_Util-x86_64.pic.o mem_usage-x86_64.pic.o util-x86_64.pic.o -lrealm-android-x86_64 -lstdc++ -lsupc++ -llog -L/realm-java/realm/realm-jni/build/core-1.5.0 -Wl,--gc-sections -Wl,-soname,librealm-jni.so -Os -std=c++14 -Wmissing-declarations -Werror -fvisibility=hidden -ffunction-sections -fdata-sections -flto -o librealm-jni-x86_64.so
+x86_64-linux-android-strip -o librealm-jni-x86_64-stripped.so -s librealm-jni-x86_64.so
+make: Leaving directory '/realm-java/realm/realm-jni/src'
+:realm-jni:copyAndroidJniX86_64
+:realm-jni:buildAndroidJni
+:realm-library:preBuild
+:realm-library:preDebugBuild
+:realm-library:compileDebugNdk UP-TO-DATE
+:realm-library:compileLint
+:realm-library:copyDebugLint UP-TO-DATE
+:realm-library:mergeDebugProguardFiles
+:realm-library:packageDebugRenderscript UP-TO-DATE
+:realm-library:checkDebugManifest
+:realm-library:preDebugAndroidTestBuild
+:realm-library:preDebugUnitTestBuild
+:realm-library:preReleaseBuild
+:realm-library:preReleaseUnitTestBuild
+:realm-library:prepareComGetkeepsafeRelinkerRelinker121Library
+:realm-library:prepareDebugDependencies
+:realm-library:compileDebugRenderscript
+:realm-library:generateDebugResValues
+:realm-library:generateDebugResources
+:realm-library:packageDebugResources
+:realm-library:compileDebugAidl
+:realm-library:generateDebugBuildConfig
+:realm-library:mergeDebugShaders
+:realm-library:compileDebugShaders
+:realm-library:generateDebugAssets
+:realm-library:mergeDebugAssets
+:realm-library:mergeDebugResources
+:realm-library:processDebugManifest
+:realm-library:processDebugResources
+:realm-library:generateDebugSources
+:realm-library:incrementalDebugJavaCompilationSafeguard
+:realm-library:compileDebugJavaWithJavac
+:realm-library:unzipJacocoAgent
+:realm-library:transformClassesWithJacocoForDebug
+:realm-library:transformClassesWithRealmTransformerForDebug
+:realm-library:processDebugJavaRes UP-TO-DATE
+:realm-library:transformResourcesWithMergeJavaResForDebug
+:realm-library:transformClassesAndResourcesWithSyncLibJarsForDebug
+:realm-library:mergeDebugJniLibFolders
+:realm-library:transformNative_libsWithMergeJniLibsForDebug
+:realm-library:transformNative_libsWithSyncJniLibsForDebug
+:realm-library:bundleDebug
+:realm-library:compileDebugSources
+:realm-library:assembleDebug
+:realm-library:compileReleaseNdk UP-TO-DATE
+:realm-library:copyReleaseLint UP-TO-DATE
+:realm-library:mergeReleaseProguardFiles
+:realm-library:packageReleaseRenderscript UP-TO-DATE
+:realm-library:checkReleaseManifest
+:realm-library:prepareReleaseDependencies
+:realm-library:compileReleaseRenderscript
+:realm-library:generateReleaseResValues
+:realm-library:generateReleaseResources
+:realm-library:packageReleaseResources
+:realm-library:compileReleaseAidl
+:realm-library:generateReleaseBuildConfig
+:realm-library:mergeReleaseShaders
+:realm-library:compileReleaseShaders
+:realm-library:generateReleaseAssets
+:realm-library:mergeReleaseAssets
+:realm-library:mergeReleaseResources
+:realm-library:processReleaseManifest
+:realm-library:processReleaseResources
+:realm-library:generateReleaseSources
+:realm-library:incrementalReleaseJavaCompilationSafeguard
+:realm-library:compileReleaseJavaWithJavac
+:realm-library:transformClassesWithRealmTransformerForRelease
+:realm-library:processReleaseJavaRes UP-TO-DATE
+:realm-library:transformResourcesWithMergeJavaResForRelease
+:realm-library:transformClassesAndResourcesWithSyncLibJarsForRelease
+:realm-library:mergeReleaseJniLibFolders
+:realm-library:transformNative_libsWithMergeJniLibsForRelease
+:realm-library:transformNative_libsWithSyncJniLibsForRelease
+:realm-library:bundleRelease
+:realm-library:compileReleaseSources
+:realm-library:assembleRelease
+:realm-library:javadoc
+100 warnings
+:realm-library:javadocJar
+:realm-library:sourcesJar
+:realm-library:assemble
+
+BUILD SUCCESSFUL
+
+Total time: 9 mins 50.01 secs
