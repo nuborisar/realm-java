@@ -28,10 +28,10 @@ public class Utils {
     public static void initialize(ProcessingEnvironment env) {
         typeUtils = env.getTypeUtils();
         messager = env.getMessager();
-        realmList = typeUtils.getDeclaredType(env.getElementUtils().getTypeElement("io.realm.RealmList"),
+        realmList = typeUtils.getDeclaredType(env.getElementUtils().getTypeElement("io.realmox.RealmList"),
                 typeUtils.getWildcardType(null, null));
-        realmModel = env.getElementUtils().getTypeElement("io.realm.RealmModel").asType();
-        markerInterface = env.getTypeUtils().getDeclaredType(env.getElementUtils().getTypeElement("io.realm.RealmModel"));
+        realmModel = env.getElementUtils().getTypeElement("io.realmox.RealmModel").asType();
+        markerInterface = env.getTypeUtils().getDeclaredType(env.getElementUtils().getTypeElement("io.realmox.RealmModel"));
     }
 
     /**

@@ -73,11 +73,11 @@ public class RealmProxyMediatorGenerator {
                 "java.util.Set",
                 "java.util.Iterator",
                 "java.util.Collection",
-                "io.realm.internal.ColumnInfo",
-                "io.realm.internal.ImplicitTransaction",
-                "io.realm.internal.RealmObjectProxy",
-                "io.realm.internal.RealmProxyMediator",
-                "io.realm.internal.Table",
+                "io.realmox.internal.ColumnInfo",
+                "io.realmox.internal.ImplicitTransaction",
+                "io.realmox.internal.RealmObjectProxy",
+                "io.realmox.internal.RealmProxyMediator",
+                "io.realmox.internal.Table",
                 "org.json.JSONException",
                 "org.json.JSONObject"
         );

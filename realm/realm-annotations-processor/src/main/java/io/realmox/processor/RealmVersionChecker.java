@@ -29,7 +29,7 @@ public class RealmVersionChecker {
     private static boolean isFirstRound = true;
 
     private static final String VERSION_URL = "http://static.realm.io/update/java?";
-    private static final String REALM_VERSION = Version.VERSION;
+    private static final String REALM_VERSION = "@version@";//Version.VERSION;
     private static final String REALM_VERSION_PATTERN = "\\d+\\.\\d+\\.\\d+";
     private static final int READ_TIMEOUT = 2000;
     private static final int CONNECT_TIMEOUT = 4000;
