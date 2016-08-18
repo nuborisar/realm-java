@@ -17,16 +17,16 @@
 #include "io_realm_internal_LinkView.h"
 #include "util.hpp"
 
-using namespace realm;
+using namespace realmox;
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClose
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeClose
   (JNIEnv*, jclass, jlong nativeLinkViewPtr)
 {
     LangBindHelper::unbind_linklist_ptr(*LV(nativeLinkViewPtr));
 }
 
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetRow
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetRow
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -43,7 +43,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetRow
 }
 
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetRowIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetTargetRowIndex
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -59,7 +59,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetRowIndex
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeAdd
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeAdd
   (JNIEnv* env, jclass, jlong nativeLinkViewPtr, jlong rowIndex)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -71,7 +71,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeAdd
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeInsert
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeInsert
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos, jlong rowIndex)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -83,7 +83,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeInsert
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeSet
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeSet
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos, jlong rowIndex)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -98,7 +98,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeSet
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeMove
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeMove
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong old_pos, jlong new_pos)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -117,7 +117,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeMove
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemove
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemove
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -132,7 +132,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemove
 }
 
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClear
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeClear
   (JNIEnv* env, jclass, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -144,7 +144,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClear
 }
 
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeSize
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeSize
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr)
 {
     
@@ -158,7 +158,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeSize
 }
 
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsEmpty
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_LinkView_nativeIsEmpty
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -170,7 +170,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsEmpty
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeWhere
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeWhere
   (JNIEnv *env, jobject, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -183,7 +183,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeWhere
     return 0;
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsAttached
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_LinkView_nativeIsAttached
   (JNIEnv *env, jobject, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -195,7 +195,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsAttached
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeFind
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeFind
   (JNIEnv *env, jobject, jlong nativeLinkViewPtr, jlong targetRowIndex)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -211,7 +211,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeFind
     return -1;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveAllTargetRows
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemoveAllTargetRows
   (JNIEnv *env, jobject, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -222,7 +222,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveAllTargetRows
     } CATCH_STD()
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetTable
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetTargetTable
   (JNIEnv*, jobject, jlong nativeLinkViewPtr)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)
@@ -235,7 +235,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetTable
     return reinterpret_cast<jlong>(pTable);
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveTargetRow
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemoveTargetRow
   (JNIEnv* env, jobject, jlong nativeLinkViewPtr, jlong pos)
 {
     TR_ENTER_PTR(nativeLinkViewPtr)

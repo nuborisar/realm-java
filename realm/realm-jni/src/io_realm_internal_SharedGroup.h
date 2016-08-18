@@ -24,7 +24,7 @@ extern "C" {
  * Method:    createNativeWithImplicitTransactions
  * Signature: (JI[B)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_createNativeWithImplicitTransactions
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_createNativeWithImplicitTransactions
   (JNIEnv *, jobject, jlong, jint, jbyteArray);
 
 /*
@@ -32,7 +32,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_createNativeWithImpli
  * Method:    nativeCreateReplication
  * Signature: (Ljava/lang/String;[B)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreateReplication
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeCreateReplication
   (JNIEnv *, jobject, jstring, jbyteArray);
 
 /*
@@ -40,7 +40,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreateReplicati
  * Method:    nativeCommitAndContinueAsRead
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommitAndContinueAsRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCommitAndContinueAsRead
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -48,7 +48,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommitAndContinu
  * Method:    nativeBeginImplicit
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginImplicit
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginImplicit
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -56,7 +56,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginImplicit
  * Method:    nativeReserve
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeReserve
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeReserve
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -64,7 +64,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeReserve
  * Method:    nativeHasChanged
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeHasChanged
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeHasChanged
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -72,7 +72,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeHasChanged
  * Method:    nativeBeginRead
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginRead
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginRead
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -80,7 +80,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginRead
  * Method:    nativeEndRead
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeEndRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeEndRead
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -88,7 +88,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeEndRead
  * Method:    nativeBeginWrite
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginWrite
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginWrite
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -96,7 +96,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginWrite
  * Method:    nativeCommit
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommit
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCommit
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -104,7 +104,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommit
  * Method:    nativeRollback
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollback
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeRollback
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -112,7 +112,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollback
  * Method:    nativeCreate
  * Signature: (Ljava/lang/String;IZZ[B)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreate
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeCreate
   (JNIEnv *, jobject, jstring, jint, jboolean, jboolean, jbyteArray);
 
 /*
@@ -120,7 +120,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreate
  * Method:    nativeCompact
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeCompact
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeCompact
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -128,7 +128,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeCompact
  * Method:    nativeClose
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeClose
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeClose
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -136,7 +136,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeClose
  * Method:    nativeCloseReplication
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCloseReplication
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCloseReplication
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -144,7 +144,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCloseReplication
  * Method:    nativeRollbackAndContinueAsRead
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollbackAndContinueAsRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeRollbackAndContinueAsRead
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -152,7 +152,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollbackAndConti
  * Method:    nativeGetVersionID
  * Signature: (J)[J
  */
-JNIEXPORT jlongArray JNICALL Java_io_realm_internal_SharedGroup_nativeGetVersionID
+JNIEXPORT jlongArray JNICALL Java_io_realmox_internal_SharedGroup_nativeGetVersionID
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -160,7 +160,7 @@ JNIEXPORT jlongArray JNICALL Java_io_realm_internal_SharedGroup_nativeGetVersion
  * Method:    nativeWaitForChange
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeWaitForChange
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeWaitForChange
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -168,7 +168,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeWaitForChang
  * Method:    nativeStopWaitForChange
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeStopWaitForChange
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeStopWaitForChange
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -176,7 +176,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeStopWaitForChang
  * Method:    nativeAdvanceRead
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeAdvanceRead
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -184,7 +184,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceRead
  * Method:    nativeAdvanceReadToVersion
  * Signature: (JJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceReadToVersion
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeAdvanceReadToVersion
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -192,7 +192,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceReadToVer
  * Method:    nativePromoteToWrite
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativePromoteToWrite
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativePromoteToWrite
   (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus

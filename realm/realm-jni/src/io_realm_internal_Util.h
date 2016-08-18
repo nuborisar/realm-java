@@ -12,7 +12,7 @@ extern "C" {
  * Method:    nativeGetMemUsage
  * Signature: ()J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Util_nativeGetMemUsage
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Util_nativeGetMemUsage
   (JNIEnv *, jclass);
 
 /*
@@ -20,7 +20,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Util_nativeGetMemUsage
  * Method:    nativeSetDebugLevel
  * Signature: (I)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Util_nativeSetDebugLevel
+JNIEXPORT void JNICALL Java_io_realmox_internal_Util_nativeSetDebugLevel
   (JNIEnv *, jclass, jint);
 
 /*
@@ -28,7 +28,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Util_nativeSetDebugLevel
  * Method:    nativeGetTablePrefix
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeGetTablePrefix
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Util_nativeGetTablePrefix
   (JNIEnv *, jclass);
 
 /*
@@ -36,7 +36,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeGetTablePrefix
  * Method:    nativeTestcase
  * Signature: (IZJ)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeTestcase
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Util_nativeTestcase
   (JNIEnv *, jclass, jint, jboolean, jlong);
 
 #ifdef __cplusplus

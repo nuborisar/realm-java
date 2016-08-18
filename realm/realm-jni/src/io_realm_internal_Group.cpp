@@ -19,10 +19,10 @@
 #include "util.hpp"
 #include "io_realm_internal_Group.h"
 
-using namespace realm;
+using namespace realmox;
 using std::string;
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__(
     JNIEnv*,  jobject)
 {
     TR_ENTER()
@@ -31,7 +31,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__(
     return reinterpret_cast<jlong>(ptr);
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_lang_String_2I(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__Ljava_lang_String_2I(
     JNIEnv* env, jobject, jstring jFileName, jint mode)
 {
     TR_ENTER()
@@ -66,7 +66,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_lang_St
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative___3B(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative___3B(
     JNIEnv* env, jobject, jbyteArray jData)
 {
     TR_ENTER()
@@ -98,7 +98,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative___3B(
 }
 
 // FIXME: Remove this method? It's dangerous to not own the group data...
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_nio_ByteBuffer_2(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__Ljava_nio_ByteBuffer_2(
     JNIEnv* env, jobject, jobject jByteBuffer)
 {
     TR_ENTER()
@@ -118,21 +118,21 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_nio_Byt
     return reinterpret_cast<jlong>(pGroup);
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeClose(
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeClose(
     JNIEnv*, jclass, jlong nativeGroupPtr)
 {
     TR_ENTER_PTR(nativeGroupPtr)
     delete G(nativeGroupPtr);
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeSize(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_nativeSize(
     JNIEnv*, jobject, jlong nativeGroupPtr)
 {
     TR_ENTER_PTR(nativeGroupPtr)
     return static_cast<jlong>( G(nativeGroupPtr)->size() ); // noexcept
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeHasTable(
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_Group_nativeHasTable(
     JNIEnv* env, jobject, jlong nativeGroupPtr, jstring jTableName)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -143,7 +143,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeHasTable(
     return false;
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeGetTableName(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeGetTableName(
     JNIEnv* env, jobject, jlong nativeGroupPtr, jint index)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -153,7 +153,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeGetTableName(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRemoveTable(
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeRemoveTable(
     JNIEnv* env, jobject, jlong nativeGroupPtr, jstring name)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -163,7 +163,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRemoveTable(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRenameTable(
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeRenameTable(
     JNIEnv* env, jobject, jlong nativeGroupPtr, jstring oldName, jstring newName)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -174,7 +174,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRenameTable(
     } CATCH_STD()
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeGetTableNativePtr(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_nativeGetTableNativePtr(
     JNIEnv *env, jobject, jlong nativeGroupPtr, jstring name)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -186,7 +186,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeGetTableNativePtr(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeWriteToFile(
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeWriteToFile(
     JNIEnv* env, jobject, jlong nativeGroupPtr, jstring jFileName, jbyteArray keyArray)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -205,7 +205,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeWriteToFile(
     CATCH_STD()
 }
 
-JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Group_nativeWriteToMem(
+JNIEXPORT jbyteArray JNICALL Java_io_realmox_internal_Group_nativeWriteToMem(
     JNIEnv* env, jobject, jlong nativeGroupPtr)
 {
     TR_ENTER_PTR(nativeGroupPtr)
@@ -236,7 +236,7 @@ JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Group_nativeWriteToMem(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeCommit(
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeCommit(
     JNIEnv*, jobject, jlong nativeGroupPtr)
 {
     TR_ENTER()
@@ -244,7 +244,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeCommit(
 }
 
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToJson(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeToJson(
     JNIEnv* env, jobject, jlong nativeGroupPtr)
 {
     Group* grp = G(nativeGroupPtr);
@@ -260,7 +260,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToJson(
     return 0;
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToString(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeToString(
     JNIEnv* env, jobject, jlong nativeGroupPtr)
 {
     Group* grp = G(nativeGroupPtr);
@@ -275,7 +275,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToString(
     return 0;
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeIsEmpty(
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_Group_nativeIsEmpty(
     JNIEnv*, jobject, jlong nativeGroupPtr)
 {
     Group* grp = G(nativeGroupPtr);

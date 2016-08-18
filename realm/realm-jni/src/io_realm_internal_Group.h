@@ -18,7 +18,7 @@ extern "C" {
  * Method:    nativeRemoveTable
  * Signature: (JLjava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRemoveTable
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeRemoveTable
   (JNIEnv *, jobject, jlong, jstring);
 
 /*
@@ -26,7 +26,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRemoveTable
  * Method:    nativeRenameTable
  * Signature: (JLjava/lang/String;Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRenameTable
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeRenameTable
   (JNIEnv *, jobject, jlong, jstring, jstring);
 
 /*
@@ -34,7 +34,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeRenameTable
  * Method:    createNative
  * Signature: ()J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__
   (JNIEnv *, jobject);
 
 /*
@@ -42,7 +42,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__
  * Method:    createNative
  * Signature: (Ljava/lang/String;I)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_lang_String_2I
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__Ljava_lang_String_2I
   (JNIEnv *, jobject, jstring, jint);
 
 /*
@@ -50,7 +50,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_lang_St
  * Method:    createNative
  * Signature: ([B)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative___3B
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative___3B
   (JNIEnv *, jobject, jbyteArray);
 
 /*
@@ -58,7 +58,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative___3B
  * Method:    createNative
  * Signature: (Ljava/nio/ByteBuffer;)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_nio_ByteBuffer_2
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_createNative__Ljava_nio_ByteBuffer_2
   (JNIEnv *, jobject, jobject);
 
 /*
@@ -66,7 +66,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_createNative__Ljava_nio_Byt
  * Method:    nativeClose
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeClose
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeClose
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -74,7 +74,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeClose
  * Method:    nativeSize
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeSize
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_nativeSize
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -82,7 +82,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeSize
  * Method:    nativeGetTableName
  * Signature: (JI)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeGetTableName
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeGetTableName
   (JNIEnv *, jobject, jlong, jint);
 
 /*
@@ -90,7 +90,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeGetTableName
  * Method:    nativeHasTable
  * Signature: (JLjava/lang/String;)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeHasTable
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_Group_nativeHasTable
   (JNIEnv *, jobject, jlong, jstring);
 
 /*
@@ -98,7 +98,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeHasTable
  * Method:    nativeWriteToFile
  * Signature: (JLjava/lang/String;[B)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeWriteToFile
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeWriteToFile
   (JNIEnv *, jobject, jlong, jstring, jbyteArray);
 
 /*
@@ -106,7 +106,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeWriteToFile
  * Method:    nativeGetTableNativePtr
  * Signature: (JLjava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeGetTableNativePtr
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Group_nativeGetTableNativePtr
   (JNIEnv *, jobject, jlong, jstring);
 
 /*
@@ -114,7 +114,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_Group_nativeGetTableNativePtr
  * Method:    nativeWriteToMem
  * Signature: (J)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Group_nativeWriteToMem
+JNIEXPORT jbyteArray JNICALL Java_io_realmox_internal_Group_nativeWriteToMem
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -122,7 +122,7 @@ JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Group_nativeWriteToMem
  * Method:    nativeToJson
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToJson
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeToJson
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -130,7 +130,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToJson
  * Method:    nativeCommit
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeCommit
+JNIEXPORT void JNICALL Java_io_realmox_internal_Group_nativeCommit
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -138,7 +138,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Group_nativeCommit
  * Method:    nativeToString
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToString
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Group_nativeToString
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -146,7 +146,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Group_nativeToString
  * Method:    nativeIsEmpty
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_Group_nativeIsEmpty
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_Group_nativeIsEmpty
   (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus

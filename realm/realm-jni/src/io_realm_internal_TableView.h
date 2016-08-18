@@ -14,7 +14,7 @@ extern "C" {
  * Method:    nativeClose
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClose
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeClose
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -22,7 +22,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClose
  * Method:    nativeSize
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSize
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSize
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -30,7 +30,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSize
  * Method:    nativeGetSourceRowIndex
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetSourceRowIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetSourceRowIndex
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -38,7 +38,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetSourceRowIndex
  * Method:    nativeGetColumnCount
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnCount
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetColumnCount
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -46,7 +46,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnCount
  * Method:    nativeGetColumnName
  * Signature: (JJ)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetColumnName
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeGetColumnName
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -54,7 +54,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetColumnName
  * Method:    nativeGetColumnIndex
  * Signature: (JLjava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetColumnIndex
   (JNIEnv *, jobject, jlong, jstring);
 
 /*
@@ -62,7 +62,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnIndex
  * Method:    nativeGetColumnType
  * Signature: (JJ)I
  */
-JNIEXPORT jint JNICALL Java_io_realm_internal_TableView_nativeGetColumnType
+JNIEXPORT jint JNICALL Java_io_realmox_internal_TableView_nativeGetColumnType
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -70,7 +70,7 @@ JNIEXPORT jint JNICALL Java_io_realm_internal_TableView_nativeGetColumnType
  * Method:    nativeGetLong
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLong
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetLong
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -78,7 +78,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLong
  * Method:    nativeGetBoolean
  * Signature: (JJJ)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeGetBoolean
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_TableView_nativeGetBoolean
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -86,7 +86,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeGetBoolean
  * Method:    nativeGetFloat
  * Signature: (JJJ)F
  */
-JNIEXPORT jfloat JNICALL Java_io_realm_internal_TableView_nativeGetFloat
+JNIEXPORT jfloat JNICALL Java_io_realmox_internal_TableView_nativeGetFloat
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -94,7 +94,7 @@ JNIEXPORT jfloat JNICALL Java_io_realm_internal_TableView_nativeGetFloat
  * Method:    nativeGetDouble
  * Signature: (JJJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeGetDouble
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeGetDouble
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -102,7 +102,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeGetDouble
  * Method:    nativeGetTimestamp
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetTimestamp
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetTimestamp
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -110,7 +110,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetTimestamp
  * Method:    nativeGetString
  * Signature: (JJJ)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetString
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeGetString
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -118,7 +118,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetString
  * Method:    nativeGetByteArray
  * Signature: (JJJ)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_TableView_nativeGetByteArray
+JNIEXPORT jbyteArray JNICALL Java_io_realmox_internal_TableView_nativeGetByteArray
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -126,7 +126,7 @@ JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_TableView_nativeGetByteArray
  * Method:    nativeGetLink
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLink
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetLink
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -134,7 +134,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLink
  * Method:    nativeSetLong
  * Signature: (JJJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLong
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetLong
   (JNIEnv *, jobject, jlong, jlong, jlong, jlong);
 
 /*
@@ -142,7 +142,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLong
  * Method:    nativeSetBoolean
  * Signature: (JJJZ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetBoolean
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetBoolean
   (JNIEnv *, jobject, jlong, jlong, jlong, jboolean);
 
 /*
@@ -150,7 +150,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetBoolean
  * Method:    nativeSetFloat
  * Signature: (JJJF)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetFloat
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetFloat
   (JNIEnv *, jobject, jlong, jlong, jlong, jfloat);
 
 /*
@@ -158,7 +158,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetFloat
  * Method:    nativeSetDouble
  * Signature: (JJJD)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetDouble
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetDouble
   (JNIEnv *, jobject, jlong, jlong, jlong, jdouble);
 
 /*
@@ -166,7 +166,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetDouble
  * Method:    nativeSetTimestampValue
  * Signature: (JJJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetTimestampValue
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetTimestampValue
   (JNIEnv *, jobject, jlong, jlong, jlong, jlong);
 
 /*
@@ -174,7 +174,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetTimestampValue
  * Method:    nativeSetString
  * Signature: (JJJLjava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetString
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetString
   (JNIEnv *, jobject, jlong, jlong, jlong, jstring);
 
 /*
@@ -182,7 +182,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetString
  * Method:    nativeSetByteArray
  * Signature: (JJJ[B)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetByteArray
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetByteArray
   (JNIEnv *, jobject, jlong, jlong, jlong, jbyteArray);
 
 /*
@@ -190,7 +190,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetByteArray
  * Method:    nativeSetLink
  * Signature: (JJJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLink
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetLink
   (JNIEnv *, jobject, jlong, jlong, jlong, jlong);
 
 /*
@@ -198,7 +198,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLink
  * Method:    nativeIsNullLink
  * Signature: (JJJ)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeIsNullLink
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_TableView_nativeIsNullLink
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -206,7 +206,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeIsNullLink
  * Method:    nativeNullifyLink
  * Signature: (JJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeNullifyLink
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeNullifyLink
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -214,7 +214,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeNullifyLink
  * Method:    nativeClear
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClear
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeClear
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -222,7 +222,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClear
  * Method:    nativeRemoveRow
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeRemoveRow
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeRemoveRow
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -230,7 +230,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeRemoveRow
  * Method:    nativeFindFirstInt
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstInt
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstInt
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -238,7 +238,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstInt
  * Method:    nativeFindFirstBool
  * Signature: (JJZ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstBool
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstBool
   (JNIEnv *, jobject, jlong, jlong, jboolean);
 
 /*
@@ -246,7 +246,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstBool
  * Method:    nativeFindFirstFloat
  * Signature: (JJF)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstFloat
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstFloat
   (JNIEnv *, jobject, jlong, jlong, jfloat);
 
 /*
@@ -254,7 +254,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstFloat
  * Method:    nativeFindFirstDouble
  * Signature: (JJD)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDouble
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstDouble
   (JNIEnv *, jobject, jlong, jlong, jdouble);
 
 /*
@@ -262,7 +262,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDouble
  * Method:    nativeFindFirstDate
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDate
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstDate
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -270,7 +270,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDate
  * Method:    nativeFindFirstString
  * Signature: (JJLjava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstString
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstString
   (JNIEnv *, jobject, jlong, jlong, jstring);
 
 /*
@@ -278,7 +278,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstString
  * Method:    nativeFindAllInt
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllInt
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllInt
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -286,7 +286,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllInt
  * Method:    nativeFindAllBool
  * Signature: (JJZ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllBool
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllBool
   (JNIEnv *, jobject, jlong, jlong, jboolean);
 
 /*
@@ -294,7 +294,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllBool
  * Method:    nativeFindAllFloat
  * Signature: (JJF)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllFloat
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllFloat
   (JNIEnv *, jobject, jlong, jlong, jfloat);
 
 /*
@@ -302,7 +302,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllFloat
  * Method:    nativeFindAllDouble
  * Signature: (JJD)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDouble
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllDouble
   (JNIEnv *, jobject, jlong, jlong, jdouble);
 
 /*
@@ -310,7 +310,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDouble
  * Method:    nativeFindAllDate
  * Signature: (JJJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDate
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllDate
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -318,7 +318,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDate
  * Method:    nativeFindBySourceNdx
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindBySourceNdx
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindBySourceNdx
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -326,7 +326,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindBySourceNdx
  * Method:    nativeSumInt
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSumInt
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSumInt
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -334,7 +334,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSumInt
  * Method:    nativeFindAllString
  * Signature: (JJLjava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllString
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllString
   (JNIEnv *, jobject, jlong, jlong, jstring);
 
 /*
@@ -342,7 +342,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllString
  * Method:    nativeMaximumInt
  * Signature: (JJ)Ljava/lang/Long;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumInt
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumInt
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -350,7 +350,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumInt
  * Method:    nativeMinimumInt
  * Signature: (JJ)Ljava/lang/Long;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumInt
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumInt
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -358,7 +358,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumInt
  * Method:    nativeAverageInt
  * Signature: (JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageInt
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageInt
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -366,7 +366,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageInt
  * Method:    nativeSumFloat
  * Signature: (JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumFloat
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeSumFloat
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -374,7 +374,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumFloat
  * Method:    nativeMaximumFloat
  * Signature: (JJ)Ljava/lang/Float;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumFloat
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumFloat
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -382,7 +382,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumFloat
  * Method:    nativeMinimumFloat
  * Signature: (JJ)Ljava/lang/Float;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumFloat
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumFloat
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -390,7 +390,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumFloat
  * Method:    nativeAverageFloat
  * Signature: (JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageFloat
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageFloat
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -398,7 +398,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageFloat
  * Method:    nativeSumDouble
  * Signature: (JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumDouble
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeSumDouble
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -406,7 +406,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumDouble
  * Method:    nativeMaximumDouble
  * Signature: (JJ)Ljava/lang/Double;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumDouble
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumDouble
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -414,7 +414,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumDouble
  * Method:    nativeMinimumDouble
  * Signature: (JJ)Ljava/lang/Double;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumDouble
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumDouble
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -422,7 +422,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumDouble
  * Method:    nativeAverageDouble
  * Signature: (JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageDouble
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageDouble
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -430,7 +430,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageDouble
  * Method:    nativeMaximumTimestamp
  * Signature: (JJ)Ljava/lang/Long;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumTimestamp
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumTimestamp
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -438,7 +438,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumTimestam
  * Method:    nativeMinimumTimestamp
  * Signature: (JJ)Ljava/lang/Long;
  */
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumTimestamp
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumTimestamp
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -446,7 +446,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumTimestam
  * Method:    nativeSort
  * Signature: (JJZ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSort
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSort
   (JNIEnv *, jobject, jlong, jlong, jboolean);
 
 /*
@@ -454,7 +454,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSort
  * Method:    nativeSortMulti
  * Signature: (J[J[Z)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSortMulti
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSortMulti
   (JNIEnv *, jobject, jlong, jlongArray, jbooleanArray);
 
 /*
@@ -462,7 +462,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSortMulti
  * Method:    createNativeTableView
  * Signature: (Lio/realm/internal/Table;J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_createNativeTableView
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_createNativeTableView
   (JNIEnv *, jobject, jobject, jlong);
 
 /*
@@ -470,7 +470,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_createNativeTableView
  * Method:    nativeToJson
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeToJson
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeToJson
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -478,7 +478,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeToJson
  * Method:    nativeWhere
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeWhere
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeWhere
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -486,7 +486,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeWhere
  * Method:    nativePivot
  * Signature: (JJJIJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativePivot
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativePivot
   (JNIEnv *, jobject, jlong, jlong, jlong, jint, jlong);
 
 /*
@@ -494,7 +494,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativePivot
  * Method:    nativeDistinct
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinct
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeDistinct
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -502,7 +502,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinct
  * Method:    nativeSyncIfNeeded
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSyncIfNeeded
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSyncIfNeeded
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -510,7 +510,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSyncIfNeeded
  * Method:    nativeDistinctMulti
  * Signature: (J[J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinctMulti
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeDistinctMulti
   (JNIEnv *, jobject, jlong, jlongArray);
 
 /*
@@ -518,7 +518,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinctMulti
  * Method:    nativeSync
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSync
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSync
   (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus

@@ -12,7 +12,7 @@ extern "C" {
  * Method:    nativeClose
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClose
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeClose
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -20,7 +20,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClose
  * Method:    nativeGetRow
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetRow
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetRow
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -28,7 +28,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetRow
  * Method:    nativeGetTargetRowIndex
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetRowIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetTargetRowIndex
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -36,7 +36,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetRowIndex
  * Method:    nativeAdd
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeAdd
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeAdd
   (JNIEnv *, jclass, jlong, jlong);
 
 /*
@@ -44,7 +44,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeAdd
  * Method:    nativeInsert
  * Signature: (JJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeInsert
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeInsert
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -52,7 +52,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeInsert
  * Method:    nativeSet
  * Signature: (JJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeSet
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeSet
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -60,7 +60,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeSet
  * Method:    nativeMove
  * Signature: (JJJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeMove
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeMove
   (JNIEnv *, jobject, jlong, jlong, jlong);
 
 /*
@@ -68,7 +68,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeMove
  * Method:    nativeRemove
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemove
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemove
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -76,7 +76,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemove
  * Method:    nativeClear
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClear
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeClear
   (JNIEnv *, jclass, jlong);
 
 /*
@@ -84,7 +84,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeClear
  * Method:    nativeSize
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeSize
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeSize
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -92,7 +92,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeSize
  * Method:    nativeIsEmpty
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsEmpty
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_LinkView_nativeIsEmpty
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -100,7 +100,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsEmpty
  * Method:    nativeWhere
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeWhere
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeWhere
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -108,7 +108,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeWhere
  * Method:    nativeIsAttached
  * Signature: (J)Z
  */
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsAttached
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_LinkView_nativeIsAttached
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -116,7 +116,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_LinkView_nativeIsAttached
  * Method:    nativeFind
  * Signature: (JJ)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeFind
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeFind
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -124,7 +124,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeFind
  * Method:    nativeRemoveTargetRow
  * Signature: (JJ)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveTargetRow
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemoveTargetRow
   (JNIEnv *, jobject, jlong, jlong);
 
 /*
@@ -132,7 +132,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveTargetRow
  * Method:    nativeRemoveAllTargetRows
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveAllTargetRows
+JNIEXPORT void JNICALL Java_io_realmox_internal_LinkView_nativeRemoveAllTargetRows
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -140,7 +140,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_LinkView_nativeRemoveAllTargetRows
  * Method:    nativeGetTargetTable
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_io_realm_internal_LinkView_nativeGetTargetTable
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_LinkView_nativeGetTargetTable
   (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus

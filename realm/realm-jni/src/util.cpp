@@ -25,8 +25,8 @@
 #include "io_realm_internal_Util.h"
 
 using namespace std;
-using namespace realm;
-using namespace realm::util;
+using namespace realmox;
+using namespace realmox::util;
 
 // Caching classes and constructors for boxed types.
 jclass java_lang_long;

@@ -26,7 +26,7 @@
 #include "io_realm_internal_SharedGroup.h"
 
 using namespace std;
-using namespace realm;
+using namespace realmox;
 
 inline static bool jint_to_durability_level(JNIEnv* env, jint durability, SharedGroup::DurabilityLevel &level) {
     if (durability == 0)
@@ -47,7 +47,7 @@ inline static bool jint_to_durability_level(JNIEnv* env, jint durability, Shared
     return true;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreate(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeCreate(
     JNIEnv* env, jobject, jstring jfile_name, jint durability, jboolean no_create, jboolean enable_replication, jbyteArray keyArray)
 {
     TR_ENTER()
@@ -89,7 +89,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreate(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_createNativeWithImplicitTransactions
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_createNativeWithImplicitTransactions
   (JNIEnv* env, jobject, jlong native_replication_ptr, jint durability, jbyteArray keyArray)
 {
     TR_ENTER()
@@ -114,7 +114,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_createNativeWithImpli
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreateReplication
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeCreateReplication
   (JNIEnv* env, jobject, jstring jfile_name, jbyteArray keyArray)
 {
     TR_ENTER()
@@ -135,7 +135,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeCreateReplicati
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginImplicit
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginImplicit
   (JNIEnv* env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -147,7 +147,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginImplicit
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeAdvanceRead
 (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -157,7 +157,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceRead
     CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceReadToVersion
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeAdvanceReadToVersion
 (JNIEnv *env, jobject, jlong native_ptr, jlong version, jlong index)
 {
     TR_ENTER_PTR(native_ptr)
@@ -168,7 +168,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeAdvanceReadToVer
     CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativePromoteToWrite
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativePromoteToWrite
   (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr) 
@@ -178,7 +178,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativePromoteToWrite
     CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommitAndContinueAsRead
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCommitAndContinueAsRead
   (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -188,21 +188,21 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommitAndContinu
     CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCloseReplication
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCloseReplication
   (JNIEnv *, jobject, jlong native_replication_ptr)
 {
     TR_ENTER_PTR(native_replication_ptr)
     delete CH(native_replication_ptr);
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeClose(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeClose(
     JNIEnv*, jclass, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
     delete SG(native_ptr);
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeReserve(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeReserve(
    JNIEnv *env, jobject, jlong native_ptr, jlong bytes)
 {
     TR_ENTER_PTR(native_ptr)
@@ -217,7 +217,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeReserve(
     CATCH_STD()
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginRead(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginRead(
     JNIEnv* env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -229,14 +229,14 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginRead(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeEndRead(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeEndRead(
     JNIEnv *, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
     SG(native_ptr)->end_read();     // noexcept
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginWrite(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_SharedGroup_nativeBeginWrite(
     JNIEnv* env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -248,21 +248,21 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_SharedGroup_nativeBeginWrite(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeCommit(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeCommit(
     JNIEnv*, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
     SG(native_ptr)->commit();   // noexcept
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollback(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeRollback(
     JNIEnv*, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
     SG(native_ptr)->rollback();   // noexcept
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollbackAndContinueAsRead(
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeRollbackAndContinueAsRead(
     JNIEnv *, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -270,14 +270,14 @@ JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeRollbackAndConti
 }
 
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeHasChanged
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeHasChanged
   (JNIEnv *, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
     return SG(native_ptr)->has_changed();   // noexcept
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeCompact(
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeCompact(
     JNIEnv* env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -289,7 +289,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeCompact(
     return false;
 }
 
-JNIEXPORT jlongArray JNICALL Java_io_realm_internal_SharedGroup_nativeGetVersionID
+JNIEXPORT jlongArray JNICALL Java_io_realmox_internal_SharedGroup_nativeGetVersionID
         (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER()
@@ -309,7 +309,7 @@ JNIEXPORT jlongArray JNICALL Java_io_realm_internal_SharedGroup_nativeGetVersion
     return version_data;
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeWaitForChange
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_SharedGroup_nativeWaitForChange
   (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)
@@ -319,7 +319,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_SharedGroup_nativeWaitForChang
     return false;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_SharedGroup_nativeStopWaitForChange
+JNIEXPORT void JNICALL Java_io_realmox_internal_SharedGroup_nativeStopWaitForChange
   (JNIEnv *env, jobject, jlong native_ptr)
 {
     TR_ENTER_PTR(native_ptr)

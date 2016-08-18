@@ -20,7 +20,7 @@
 #include "realm/array.hpp"
 #include <ostream>
 
-using namespace realm;
+using namespace realmox;
 
 // if you disable the validation, please remember to call sync_in_needed() 
 #define VIEW_VALID_AND_IN_SYNC(env, ptr) view_valid_and_in_sync(env, ptr)
@@ -44,7 +44,7 @@ inline bool view_valid_and_in_sync(JNIEnv* env, jlong nativeViewPtr) {
 }
 
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_createNativeTableView(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_createNativeTableView(
     JNIEnv* env, jobject, jobject, jlong)
 {
     try {
@@ -53,7 +53,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_createNativeTableView(
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinct(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeDistinct(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     if (!VIEW_VALID_AND_IN_SYNC(env, nativeViewPtr))
@@ -79,7 +79,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinct(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinctMulti(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeDistinctMulti(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlongArray columnIndexes)
 {
     if (!VIEW_VALID_AND_IN_SYNC(env, nativeViewPtr))
@@ -115,7 +115,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeDistinctMulti(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativePivot(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativePivot(
     JNIEnv *env, jobject, jlong dataTablePtr, jlong stringCol, jlong intCol, jint operation, jlong resultTablePtr)
 {
 
@@ -148,7 +148,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativePivot(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClose(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeClose(
     JNIEnv*, jclass, jlong nativeViewPtr)
 {
     if (nativeViewPtr == 0)
@@ -157,7 +157,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClose(
     delete TV(nativeViewPtr);
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSize(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSize(
     JNIEnv* env, jobject, jlong nativeViewPtr)
 {
     try {
@@ -167,7 +167,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSize(
     return TV(nativeViewPtr)->size();   // noexcept
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetSourceRowIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetSourceRowIndex
 (JNIEnv *env, jobject, jlong nativeViewPtr, jlong rowIndex)
 {
     try {
@@ -181,7 +181,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetSourceRowIndex
     return TV(nativeViewPtr)->get_source_ndx(S(rowIndex));   // noexcept
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnCount
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetColumnCount
   (JNIEnv *env, jobject, jlong nativeViewPtr)
 {
     try {
@@ -191,7 +191,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnCount
     return TV(nativeViewPtr)->get_column_count();
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetColumnName
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeGetColumnName
   (JNIEnv *env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -202,7 +202,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetColumnName
     return NULL;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnIndex
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetColumnIndex
    (JNIEnv *env, jobject, jlong nativeViewPtr, jstring columnName)
 
 {
@@ -215,7 +215,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetColumnIndex
     return 0;
 }
 
-JNIEXPORT jint JNICALL Java_io_realm_internal_TableView_nativeGetColumnType
+JNIEXPORT jint JNICALL Java_io_realmox_internal_TableView_nativeGetColumnType
   (JNIEnv *env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -225,7 +225,7 @@ JNIEXPORT jint JNICALL Java_io_realm_internal_TableView_nativeGetColumnType
     return static_cast<int>( TV(nativeViewPtr)->get_column_type( S(columnIndex)) );
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLong(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetLong(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -236,7 +236,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLong(
     return TV(nativeViewPtr)->get_int( S(columnIndex), S(rowIndex));  // noexcept
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeGetBoolean(
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_TableView_nativeGetBoolean(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -247,7 +247,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeGetBoolean(
     return TV(nativeViewPtr)->get_bool( S(columnIndex), S(rowIndex));  // noexcept
 }
 
-JNIEXPORT jfloat JNICALL Java_io_realm_internal_TableView_nativeGetFloat(
+JNIEXPORT jfloat JNICALL Java_io_realmox_internal_TableView_nativeGetFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -258,7 +258,7 @@ JNIEXPORT jfloat JNICALL Java_io_realm_internal_TableView_nativeGetFloat(
     return TV(nativeViewPtr)->get_float( S(columnIndex), S(rowIndex));  // noexcept
 }
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeGetDouble(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeGetDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -269,7 +269,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeGetDouble(
     return TV(nativeViewPtr)->get_double( S(columnIndex), S(rowIndex));  // noexcept
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetTimestamp(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetTimestamp(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -280,7 +280,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetTimestamp(
     return to_milliseconds(TV(nativeViewPtr)->get_timestamp( S(columnIndex), S(rowIndex)));
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetString(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeGetString(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -294,7 +294,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeGetString(
     return NULL;
 }
 
-JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_TableView_nativeGetByteArray(
+JNIEXPORT jbyteArray JNICALL Java_io_realmox_internal_TableView_nativeGetByteArray(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -306,7 +306,7 @@ JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_TableView_nativeGetByteArray
     return NULL;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLink
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeGetLink
   (JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -319,7 +319,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeGetLink
 
 // Setters
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLong(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetLong(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jlong value)
 {
     try {
@@ -330,7 +330,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLong(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetBoolean(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetBoolean(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jboolean value)
 {
     try {
@@ -341,7 +341,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetBoolean(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetFloat(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jfloat value)
 {
     try {
@@ -352,7 +352,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetFloat(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetDouble(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jdouble value)
 {
     try {
@@ -363,7 +363,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetDouble(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetTimestampValue(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetTimestampValue(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jlong timestampValue)
 {
     try {
@@ -374,7 +374,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetTimestampValue(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetString(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetString(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jstring value)
 {
     try {
@@ -390,7 +390,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetString(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetByteArray(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetByteArray(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jbyteArray byteArray)
 {
     try {
@@ -401,7 +401,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetByteArray(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLink
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSetLink
   (JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex, jlong targetIndex)
 {
     try {
@@ -412,7 +412,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSetLink
     } CATCH_STD()
 }
 
-JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeIsNullLink
+JNIEXPORT jboolean JNICALL Java_io_realmox_internal_TableView_nativeIsNullLink
   (JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -424,7 +424,7 @@ JNIEXPORT jboolean JNICALL Java_io_realm_internal_TableView_nativeIsNullLink
     return 0;
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeNullifyLink
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeNullifyLink
   (JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong rowIndex)
 {
     try {
@@ -435,7 +435,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeNullifyLink
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClear(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeClear(
     JNIEnv* env, jobject, jlong nativeViewPtr)
 {
     try {
@@ -445,7 +445,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeClear(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeRemoveRow(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeRemoveRow(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong rowIndex)
 {
     try {
@@ -458,7 +458,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeRemoveRow(
 
 // FindFirst*
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstInt(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong value)
 {
     try {
@@ -470,7 +470,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstInt(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstBool(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstBool(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jboolean value)
 {
     try {
@@ -483,7 +483,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstBool(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstFloat(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jfloat value)
 {
     try {
@@ -495,7 +495,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstFloat(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDouble(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jdouble value)
 {
     try {
@@ -509,7 +509,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDouble(
 
 // FIXME: find_first_timestamp() isn't implemented
 /*
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDate(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstDate(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong dateTimeValue)
 {
     try {
@@ -522,7 +522,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstDate(
 }
 */
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstString(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindFirstString(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jstring value)
 {
     try {
@@ -538,7 +538,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindFirstString(
 
 // FindAll*
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllInt(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong value)
 {
     try {
@@ -551,7 +551,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllInt(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllBool(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllBool(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jboolean value)
 {
     try {
@@ -565,7 +565,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllBool(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllFloat(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jfloat value)
 {
     try {
@@ -578,7 +578,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllFloat(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDouble(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jdouble value)
 {
     try {
@@ -593,7 +593,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDouble(
 
 // FIXME: find_all_timestamp() isn't implemented
 /*
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDate(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllDate(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jlong dateTimeValue)
 {
     try {
@@ -608,7 +608,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllDate(
 }
 */
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllString(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindAllString(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jstring value)
 {
     try {
@@ -626,7 +626,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindAllString(
 
 // Integer aggregates
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSumInt(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSumInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -638,7 +638,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSumInt(
     return 0;
 }
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageInt(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -650,7 +650,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageInt(
     return 0;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumInt(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -666,7 +666,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumInt(
     return NULL;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumInt(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumInt(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -684,7 +684,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumInt(
 
 // float aggregates
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumFloat(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeSumFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -696,7 +696,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumFloat(
     return 0;
 }
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageFloat(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -708,7 +708,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageFloat(
     return 0;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumFloat(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -724,7 +724,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumFloat(
     return NULL;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumFloat(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumFloat(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -742,7 +742,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumFloat(
 
 // double aggregates
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumDouble(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeSumDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -754,7 +754,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeSumDouble(
     return 0;
 }
 
-JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageDouble(
+JNIEXPORT jdouble JNICALL Java_io_realmox_internal_TableView_nativeAverageDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -766,7 +766,7 @@ JNIEXPORT jdouble JNICALL Java_io_realm_internal_TableView_nativeAverageDouble(
     return 0;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumDouble(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -782,7 +782,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumDouble(
     return NULL;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumDouble(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumDouble(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -801,7 +801,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumDouble(
 
 // date aggregates
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumTimestamp(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMaximumTimestamp(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -818,7 +818,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMaximumTimestam
     return NULL;
 }
 
-JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumTimestamp(
+JNIEXPORT jobject JNICALL Java_io_realmox_internal_TableView_nativeMinimumTimestamp(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex)
 {
     try {
@@ -836,7 +836,7 @@ JNIEXPORT jobject JNICALL Java_io_realm_internal_TableView_nativeMinimumTimestam
 }
 
 // sort
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSort(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSort(
     JNIEnv* env, jobject, jlong nativeViewPtr, jlong columnIndex, jboolean ascending)
 {
     try {
@@ -861,7 +861,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSort(
     } CATCH_STD()
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSortMulti(
+JNIEXPORT void JNICALL Java_io_realmox_internal_TableView_nativeSortMulti(
   JNIEnv* env, jobject, jlong nativeViewPtr, jlongArray columnIndices, jbooleanArray ascending)
 {
     try {
@@ -914,7 +914,7 @@ JNIEXPORT void JNICALL Java_io_realm_internal_TableView_nativeSortMulti(
     } CATCH_STD()
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeToJson(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_TableView_nativeToJson(
     JNIEnv *env, jobject, jlong nativeViewPtr)
 {
     try {
@@ -931,7 +931,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_TableView_nativeToJson(
     return NULL;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeWhere(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeWhere(
     JNIEnv *env, jobject, jlong nativeViewPtr)
 {
     TR_ENTER_PTR(nativeViewPtr)
@@ -945,7 +945,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeWhere(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSyncIfNeeded(
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeSyncIfNeeded(
     JNIEnv* env, jobject, jlong nativeViewPtr)
 {
     bool valid = (TV(nativeViewPtr) != NULL);
@@ -961,7 +961,7 @@ JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeSyncIfNeeded(
     return 0;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_TableView_nativeFindBySourceNdx
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_TableView_nativeFindBySourceNdx
         (JNIEnv *env, jobject, jlong nativeViewPtr, jlong sourceIndex)
 {
     TR_ENTER_PTR(nativeViewPtr);

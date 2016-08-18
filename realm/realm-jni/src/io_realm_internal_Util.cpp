@@ -69,17 +69,17 @@ JNIEXPORT void JNI_OnUnload(JavaVM* vm, void*)
     }
 }
 
-JNIEXPORT void JNICALL Java_io_realm_internal_Util_nativeSetDebugLevel(JNIEnv*, jclass, jint level)
+JNIEXPORT void JNICALL Java_io_realmox_internal_Util_nativeSetDebugLevel(JNIEnv*, jclass, jint level)
 {
     trace_level = level;
 }
 
-JNIEXPORT jlong JNICALL Java_io_realm_internal_Util_nativeGetMemUsage(JNIEnv*, jclass)
+JNIEXPORT jlong JNICALL Java_io_realmox_internal_Util_nativeGetMemUsage(JNIEnv*, jclass)
 {
     return GetMemUsage();
 }
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeGetTablePrefix(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Util_nativeGetTablePrefix(
     JNIEnv* env, jclass)
 {
     realm::StringData sd(TABLE_PREFIX);
@@ -88,7 +88,7 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeGetTablePrefix(
 
 // -------------------------- Testcases for exception handling
 
-JNIEXPORT jstring JNICALL Java_io_realm_internal_Util_nativeTestcase(
+JNIEXPORT jstring JNICALL Java_io_realmox_internal_Util_nativeTestcase(
     JNIEnv *env, jclass, jint testcase, jboolean dotest, jlong)
 {
     string expect;
