@@ -16,7 +16,7 @@
 
 #include "util.hpp"
 #include "tablebase_tpl.hpp"
-#include "io_realm_internal_TableView.h"
+#include "io_realmox_internal_TableView.h"
 #include "realm/array.hpp"
 #include <ostream>
 

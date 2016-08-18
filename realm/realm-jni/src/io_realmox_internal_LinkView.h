@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class io_realm_internal_LinkView */
 
-#ifndef _Included_io_realm_internal_LinkView
-#define _Included_io_realm_internal_LinkView
+#ifndef _Included_io_realmox_internal_LinkView
+#define _Included_io_realmox_internal_LinkView
 #ifdef __cplusplus
 extern "C" {
 #endif

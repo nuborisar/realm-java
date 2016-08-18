@@ -17,13 +17,13 @@
 #include <jni.h>
 
 #include "util.hpp"
-
+//asv estode tal es del core(cambiar??)
 #include <realm/group_shared.hpp>
 #include <realm/replication.hpp>
 #include <realm/commit_log.hpp>
 
 #include "util.hpp"
-#include "io_realm_internal_SharedGroup.h"
+#include "io_realmox_internal_SharedGroup.h"
 
 using namespace std;
 using namespace realmox;

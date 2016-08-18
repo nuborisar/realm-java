@@ -17,7 +17,7 @@
 #include <realm/util/safe_int_ops.hpp>
 
 #include "util.hpp"
-#include "io_realm_internal_Group.h"
+#include "io_realmox_internal_Group.h"
 
 using namespace realmox;
 using std::string;

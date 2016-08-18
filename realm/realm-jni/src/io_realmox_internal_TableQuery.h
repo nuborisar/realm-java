@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class io_realm_internal_TableQuery */
 
-#ifndef _Included_io_realm_internal_TableQuery
-#define _Included_io_realm_internal_TableQuery
+#ifndef _Included_io_realmox_internal_TableQuery
+#define _Included_io_realmox_internal_TableQuery
 #ifdef __cplusplus
 extern "C" {
 #endif

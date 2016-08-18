@@ -17,7 +17,7 @@
 #include <sstream>
 
 #include "util.hpp"
-#include "io_realm_internal_Table.h"
+#include "io_realmox_internal_Table.h"
 #include "java_lang_List_Util.hpp"
 #include "tablebase_tpl.hpp"
 

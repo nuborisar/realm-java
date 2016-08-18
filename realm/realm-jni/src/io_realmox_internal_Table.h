@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class io_realm_internal_Table */
 
-#ifndef _Included_io_realm_internal_Table
-#define _Included_io_realm_internal_Table
+#ifndef _Included_io_realmox_internal_Table
+#define _Included_io_realmox_internal_Table
 #ifdef __cplusplus
 extern "C" {
 #endif

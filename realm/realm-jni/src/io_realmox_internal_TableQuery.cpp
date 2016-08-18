@@ -18,7 +18,7 @@
 #include <realm/group_shared.hpp>
 #include <realm/commit_log.hpp>
 #include "util.hpp"
-#include "io_realm_internal_TableQuery.h"
+#include "io_realmox_internal_TableQuery.h"
 
 using namespace realmox;
 

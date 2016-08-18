@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include "io_realm_internal_CheckedRow.h"
-#include "io_realm_internal_UncheckedRow.h"
+#include "io_realmox_internal_CheckedRow.h"
+#include "io_realmox_internal_UncheckedRow.h"
 
 #include "util.hpp"
 

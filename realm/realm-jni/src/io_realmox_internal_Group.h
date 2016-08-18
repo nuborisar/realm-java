@@ -2,17 +2,17 @@
 #include <jni.h>
 /* Header for class io_realm_internal_Group */
 
-#ifndef _Included_io_realm_internal_Group
-#define _Included_io_realm_internal_Group
+#ifndef _Included_io_realmox_internal_Group
+#define _Included_io_realmox_internal_Group
 #ifdef __cplusplus
 extern "C" {
 #endif
-#undef io_realm_internal_Group_MODE_READONLY
-#define io_realm_internal_Group_MODE_READONLY 0L
-#undef io_realm_internal_Group_MODE_READWRITE
-#define io_realm_internal_Group_MODE_READWRITE 1L
-#undef io_realm_internal_Group_MODE_READWRITE_NOCREATE
-#define io_realm_internal_Group_MODE_READWRITE_NOCREATE 2L
+#undef io_realmox_internal_Group_MODE_READONLY
+#define io_realmox_internal_Group_MODE_READONLY 0L
+#undef io_realmox_internal_Group_MODE_READWRITE
+#define io_realmox_internal_Group_MODE_READWRITE 1L
+#undef io_realmox_internal_Group_MODE_READWRITE_NOCREATE
+#define io_realmox_internal_Group_MODE_READWRITE_NOCREATE 2L
 /*
  * Class:     io_realm_internal_Group
  * Method:    nativeRemoveTable

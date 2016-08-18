@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class io_realm_internal_CheckedRow */
 
-#ifndef _Included_io_realm_internal_CheckedRow
-#define _Included_io_realm_internal_CheckedRow
+#ifndef _Included_io_realmox_internal_CheckedRow
+#define _Included_io_realmox_internal_CheckedRow
 #ifdef __cplusplus
 extern "C" {
 #endif

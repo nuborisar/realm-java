@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "io_realm_internal_LinkView.h"
+#include "io_realmox_internal_LinkView.h"
 #include "util.hpp"
 
 using namespace realmox;
