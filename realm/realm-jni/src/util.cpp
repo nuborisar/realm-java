@@ -22,7 +22,7 @@
 #include "utf8.hpp"
 
 #include "util.hpp"
-#include "io_realm_internal_Util.h"
+#include "io_realmox_internal_Util.h"
 
 using namespace std;
 using namespace realmox;
