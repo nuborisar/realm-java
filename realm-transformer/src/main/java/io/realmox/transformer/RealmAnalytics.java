@@ -136,7 +136,7 @@ public class RealmAnalytics {
                 .replaceAll("%USER_ID%", ComputerIdentifierGenerator.get())
                 .replaceAll("%APP_ID%", getAnonymousAppId())
                 .replaceAll("%LANGUAGE%", usesKotlin?"kotlin":"java")
-                .replaceAll("%REALM_VERSION%", Version.VERSION)
+                .replaceAll("%REALM_VERSION%", "@version@")// Version.VERSION)
                 .replaceAll("%OS_TYPE%", System.getProperty("os.name"))
                 .replaceAll("%OS_VERSION%", System.getProperty("os.version"));
     }
