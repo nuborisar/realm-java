@@ -16,7 +16,7 @@
 
 package io.realmox.transformer
 
-import io.realmox.annotations.Ignore
+import io.realm.annotations.Ignore
 import javassist.*
 import javassist.expr.ExprEditor
 import javassist.expr.FieldAccess

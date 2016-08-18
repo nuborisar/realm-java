@@ -22,8 +22,8 @@ import com.google.common.collect.ImmutableSet
 import com.google.common.collect.Sets
 import com.google.common.io.Files
 import groovy.io.FileType
-import io.realmox.annotations.Ignore
-import io.realmox.annotations.RealmClass
+import io.realm.annotations.Ignore
+import io.realm.annotations.RealmClass
 import javassist.ClassPool
 import javassist.CtClass
 import javassist.LoaderClassPath
