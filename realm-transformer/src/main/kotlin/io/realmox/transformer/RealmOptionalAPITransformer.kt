@@ -25,7 +25,7 @@ import com.android.build.api.transform.QualifiedContent.DefaultContentType
 import com.android.build.api.transform.TransformInput
 import com.android.build.api.transform.TransformOutputProvider
 import com.google.common.collect.ImmutableSet
-import io.realmox.annotations.internal.OptionalAPI
+import io.realm.annotations.internal.OptionalAPI
 import io.realmox.transformer.util.appendThisToClassNames
 import io.realmox.transformer.util.appendThisToClassPool
 import io.realmox.transformer.util.createClassPool
